@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parliament Part-1 (संसद भाग-1) | GS Master Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 PARLIAMENT PART-1 (भाग 5)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search Articles 79-106, Lok Sabha, Rajya Sabha, Delimitation, Motions, Speaker, Quorum in EN/हिंदी..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-parliament-intro" class="topic-link active"><span class="topic-icon">🏛️</span> 1. Article 79: Constitution of Parliament</a></li>
+          <li><a href="#sec-rajya-sabha" class="topic-link"><span class="topic-icon">🔴</span> 2. Article 80: Composition of Rajya Sabha</a></li>
+          <li><a href="#sec-lok-sabha" class="topic-link"><span class="topic-icon">🟢</span> 3. Article 81: Composition of Lok Sabha & 104th CA</a></li>
+          <li><a href="#sec-delimitation-duration" class="topic-link"><span class="topic-icon">📊</span> 4. Articles 82 & 83: Delimitation & Duration</a></li>
+          <li><a href="#sec-sessions-motions" class="topic-link"><span class="topic-icon">⚡</span> 5. Articles 84 & 85: Sessions, Motions & Routine</a></li>
+          <li><a href="#sec-address-rs-officers" class="topic-link"><span class="topic-icon">📜</span> 6. Articles 86–92: Address, RS Chairman & Deputy</a></li>
+          <li><a href="#sec-ls-officers" class="topic-link"><span class="topic-icon">⚖️</span> 7. Articles 93–99: Speaker, Deputy Speaker & Pro-tem</a></li>
+          <li><a href="#sec-quorum-vacation" class="topic-link"><span class="topic-icon">📌</span> 8. Articles 100 & 101: Quorum, Casting Vote & Vacation</a></li>
+          <li><a href="#sec-disqualifications" class="topic-link"><span class="topic-icon">🚫</span> 9. Article 102: Disqualifications & 10th Schedule</a></li>
+          <li><a href="#sec-privileges-recap" class="topic-link"><span class="topic-icon">🛡️</span> 10. Articles 103–106: Privileges & Article 73 Recap</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Polity Lecture-9 / विषय:</div>
+        <h1 class="hero-title">Parliament Part-1</h1>
+        <div class="hero-title-hindi">भाग-5: संसद — गठन, संरचना, सत्र, प्रस्ताव एवं पदाधिकारी (अनुच्छेद 79 से 106)</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Part V: Articles 79 to 106</span>
+          <span class="hero-meta-pill">🔴 Rajya Sabha (Art 80) & 🟢 Lok Sabha (Art 81)</span>
+          <span class="hero-meta-pill">⚡ Delimitation, Quorum & 10th Schedule</span>
+          <span class="hero-meta-pill">⚖️ Speaker, Chairman & Parliamentary Motions</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: ARTICLE 79 (CONSTITUTION OF PARLIAMENT)
+           ==================================================================== -->
+      <section class="study-card" id="sec-parliament-intro">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ 1. Article 79: Constitution of Parliament & Westminster Model</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: var(--primary); background: var(--bg-card-secondary); margin-top: 0;">
+            <h3 style="color: var(--primary); font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem;">
+              Article 79 : Constitution of Parliament (संसद का गठन)
+            </h3>
+            <p style="font-size: 0.92rem;">
+              There shall be a Parliament for the Union which shall consist of the <strong>President</strong> and two Houses to be known respectively as the <strong>Council of States (Rajya Sabha)</strong> and the <strong>House of the People (Lok Sabha)</strong>.
+            </p>
+            <div class="lang-hi" style="font-size: 0.88rem; margin-top: 0.25rem;">
+              संसद तीन अंगों से मिलकर बनती है: (1) राष्ट्रपति, (2) राज्यसभा (उच्च सदन), एवं (3) लोकसभा (निम्न सदन)। राष्ट्रपति संसद का अभिन्न अंग हैं क्योंकि उनकी स्वीकृति के बिना कोई विधेयक कानून नहीं बन सकता।
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0; border-top: 4px solid #10b981;">
+              <div class="offer-plan-title" style="color: #059669;">🟢 Lok Sabha (House of the People)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Non-Permanent House</strong> (Subject to dissolution).</li>
+                <li class="study-bullet">1st Chamber / Lower House / Popular House.</li>
+                <li class="study-bullet">Constituted on: <strong>17 April 1952</strong> | 1st Sitting: <strong>13 May 1952</strong>.</li>
+                <li class="study-bullet">Members elected <strong>directly by the people</strong>.</li>
+                <li class="study-bullet"><em>Green carpet represents agriculture & grassroots representation.</em></li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0; border-top: 4px solid #dc2626;">
+              <div class="offer-plan-title" style="color: #dc2626;">🔴 Rajya Sabha (Council of States)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Permanent House</strong> (Never dissolved).</li>
+                <li class="study-bullet">2nd Chamber / Upper House / House of Elders.</li>
+                <li class="study-bullet">Constituted on: <strong>3 April 1952</strong> | 1st Sitting: <strong>13 May 1952</strong>.</li>
+                <li class="study-bullet">Represents the States and Union Territories.</li>
+                <li class="study-bullet"><em>Red carpet represents royalty & sacrifices of freedom fighters.</em></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <div style="font-size: 0.88rem;">
+              📌 <strong>Origin & Names:</strong> Parliamentary system borrowed from <strong>UK (Westminster Model)</strong>. Hindi names <em>"Lok Sabha"</em> and <em>"Rajya Sabha"</em> were officially adopted in <strong>1954</strong>.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: ARTICLE 80 (COMPOSITION OF RAJYA SABHA)
+           ==================================================================== -->
+      <section class="study-card" id="sec-rajya-sabha">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🔴 2. Article 80: Composition of Rajya Sabha (Council of States)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Strength of Rajya Sabha (सीट संरचना)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Maximum Strength: 250 Members</strong>
+                  <br>• 238 Elected (States + UTs)
+                  <br>• <strong>12 Nominated by President</strong> from: <strong>Literature, Science, Arts, Social Service</strong> (💡 Trick: <strong>`LiSAS`</strong>).
+                </li>
+                <li class="study-bullet"><strong>Present Strength: 245 Members</strong>
+                  <br>• 233 Elected (225 States + 8 UTs)
+                  <br>• 12 Nominated
+                  <br><em>(5 seats kept vacant for PoK, Aksai Chin, etc.)</em>
+                </li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Method of Election & Sources</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Elected indirectly by <strong>elected MLAs of States</strong> by Proportional Representation with <strong>Single Transferable Vote (STV)</strong>.</li>
+                <li class="study-bullet"><strong>Election of RS Members:</strong> Borrowed from <strong>South Africa</strong>.</li>
+                <li class="study-bullet"><strong>Nomination of 12 RS Members:</strong> Borrowed from <strong>Ireland</strong>.</li>
+                <li class="study-bullet">Unequal representation based on State population (4th Schedule).</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Rajya Sabha State Seats Grid -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.75rem 0 0.75rem;">
+            State-wise Allocation of Rajya Sabha Seats (4th Schedule):
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.65rem; font-size: 0.85rem;">
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Uttar Pradesh</span> <strong>31 (Max)</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Maharashtra</span> <strong>19</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Tamil Nadu</span> <strong>18</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>West Bengal</span> <strong>16</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Bihar</span> <strong>16</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Karnataka</span> <strong>12</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Gujarat</span> <strong>11</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Madhya Pradesh</span> <strong>11</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Andhra Pradesh</span> <strong>11</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Odisha</span> <strong>10</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Rajasthan</span> <strong>10</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Kerala</span> <strong>9</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Punjab / Assam / TS</span> <strong>7 each</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Jharkhand</span> <strong>6</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Chhattisgarh / HR</span> <strong>5 each</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>J&K (4) / UK & HP (3)</span> <strong>4 / 3</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Delhi (3) / Puducherry (1)</span> <strong>3 / 1</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>NE States + Goa + SK</span> <strong>1 each</strong></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: ARTICLE 81 (COMPOSITION OF LOK SABHA & 104TH CA)
+           ==================================================================== -->
+      <section class="study-card" id="sec-lok-sabha">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🟢 3. Article 81: Composition of Lok Sabha & 104th Amendment Act</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Maximum & Present Strength</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Maximum Strength: 550 Seats</strong>
+                  <br>• 530 from States
+                  <br>• 20 from Union Territories
+                </li>
+                <li class="study-bullet"><strong>Present Strength: 543 Elected Members</strong>
+                  <br>• 524 from States
+                  <br>• 19 from Union Territories
+                </li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #dc2626; background: rgba(220, 38, 38, 0.05);">
+              <strong style="color: #dc2626; font-size: 0.95rem;">⭐ 104th Constitutional Amendment Act, 2019:</strong>
+              <p style="font-size: 0.88rem; margin-top: 0.3rem;">
+                Abolished the nomination of <strong>2 Anglo-Indian members</strong> to Lok Sabha by the President under <strong>Article 331</strong>.
+              </p>
+              <div class="lang-hi" style="font-size: 0.85rem; margin-top: 0.25rem;">
+                104वें संशोधन द्वारा आंग्ल-भारतीय समुदाय के 2 सदस्यों के मनोनयन को समाप्त कर दिया गया; अतः अधिकतम संख्या 552 से घटकर 550 तथा वर्तमान संख्या 545 से 543 हो गई।
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Lok Sabha Seats Matrix -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.75rem 0 0.75rem;">
+            Major States Lok Sabha Seats:
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.65rem; font-size: 0.85rem;">
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Uttar Pradesh</span> <strong>80 (Max)</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Maharashtra</span> <strong>48</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>West Bengal</span> <strong>42</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Bihar</span> <strong>40</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Tamil Nadu</span> <strong>39</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Madhya Pradesh</span> <strong>29</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Karnataka</span> <strong>28</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Gujarat</span> <strong>26</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Rajasthan / AP</span> <strong>25 each</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Odisha</span> <strong>21</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Kerala</span> <strong>20</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Telangana</span> <strong>17</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Assam / Jharkhand</span> <strong>14 each</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Punjab</span> <strong>13</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>Delhi</span> <strong>7</strong></div>
+            <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color); justify-content:space-between;"><span>J&K / Uttarakhand</span> <strong>5 each</strong></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: ARTICLES 82 & 83 (DELIMITATION & DURATION)
+           ==================================================================== -->
+      <section class="study-card" id="sec-delimitation-duration">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📊 4. Articles 82 & 83: Delimitation Commission & Duration of Houses</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 82 : Delimitation Commission (परिसीमन)</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.35rem;">
+                <li class="study-bullet">Readjustment of constituencies after every Census.</li>
+                <li class="study-bullet"><strong>4 Delimitation Acts:</strong> 1952, 1962, 1972, 2002.</li>
+                <li class="study-bullet"><strong>42nd CA (1976):</strong> Froze total seats based on <strong>1971 Census</strong> until year 2000.</li>
+                <li class="study-bullet"><strong>84th CA (2001):</strong> Extended seat freeze up to year <strong>2026</strong>.</li>
+                <li class="study-bullet"><strong>87th CA (2003):</strong> Boundary adjustments based on <strong>2001 Census</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 83 : Duration of Houses (अवधि)</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Rajya Sabha:</strong> Permanent body; <strong>1/3rd members retire every 2 years</strong>; term of an individual member is <strong>6 years</strong>.</li>
+                <li class="study-bullet"><strong>Lok Sabha:</strong> Normal term is <strong>5 years</strong>. Maximum gap between sessions cannot exceed <strong>6 months</strong>.</li>
+                <li class="study-bullet">During National Emergency, LS term can be extended for <strong>1 year at a time</strong> (max 6 months after emergency ends).</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: ARTICLES 84 & 85 (SESSIONS, MOTIONS & ROUTINE)
+           ==================================================================== -->
+      <section class="study-card" id="sec-sessions-motions">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚡ 5. Articles 84 & 85: Qualifications, Sessions, Motions & Daily Routine</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #1e40af;">Article 84: Minimum Age</div>
+              <p style="font-size: 0.88rem;">
+                • <strong>Rajya Sabha:</strong> 30 Years<br>
+                • <strong>Lok Sabha:</strong> 25 Years<br>
+                • Must be an Indian citizen.
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #ea580c;">3 Sessions of Parliament</div>
+              <p style="font-size: 0.85rem;">
+                1. <strong>Budget Session:</strong> Feb–May<br>
+                2. <strong>Monsoon Session:</strong> July–Aug<br>
+                3. <strong>Winter Session:</strong> Nov–Dec
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Sittings Terminology</div>
+              <p style="font-size: 0.85rem;">
+                • <strong>Adjournment:</strong> By Presiding Officer<br>
+                • <strong>Adjournment Sine Die:</strong> By Presiding Officer<br>
+                • <strong>Prorogation & Dissolution:</strong> By President
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Parliamentary Motions -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.75rem 0 0.75rem;">
+            Important Parliamentary Motions:
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.88rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color: #dc2626;">No-Confidence Motion (अविश्वास प्रस्ताव):</strong>
+              <p style="margin-top: 0.25rem;">Moved only in Lok Sabha against entire Council of Ministers. Needs support of <strong>50 members</strong>. No reason needed. If passed, <strong>Government must resign</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color: #ea580c;">Censure Motion (निंदा प्रस्ताव):</strong>
+              <p style="margin-top: 0.25rem;">Reason must be stated. Moved against individual minister or council for specific policy failure. If passed, <strong>resignation is NOT required</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color: #2563eb;">Adjournment Motion (काम रोको प्रस्ताव):</strong>
+              <p style="margin-top: 0.25rem;">Draws attention to an urgent matter of public importance. Needs <strong>50 members' support</strong>. Censure element involved.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color: #059669;">Calling Attention & Point of Order:</strong>
+              <p style="margin-top: 0.25rem;">Calling attention to urgent matter (Indian innovation). <strong>Point of Order</strong> raised when rules are violated (no debate allowed).</p>
+            </div>
+
+          </div>
+
+          <!-- Types of Questions & Routine -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #2563eb; background: var(--bg-card-secondary);">
+              <strong>Types of Questions:</strong>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.25rem; margin-top: 0.3rem;">
+                <li class="study-bullet">• <strong>Starred (*):</strong> Oral answer, supplementary questions allowed.</li>
+                <li class="study-bullet">• <strong>Unstarred:</strong> Written answer, no supplementaries.</li>
+                <li class="study-bullet">• <strong>Short Notice:</strong> Urgent public matter (&lt; 10 days notice).</li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #059669; background: var(--bg-card-secondary);">
+              <strong>Daily Routine of a Sitting:</strong>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.25rem; margin-top: 0.3rem;">
+                <li class="study-bullet">• <strong>11:00 AM – 12:00 PM:</strong> <strong>Question Hour (प्रश्न काल)</strong></li>
+                <li class="study-bullet">• <strong>12:00 PM – 1:00 PM:</strong> <strong>Zero Hour (शून्य काल)</strong> — Indian innovation since 1962.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: ARTICLES 86 TO 92 (ADDRESS & RS OFFICERS)
+           ==================================================================== -->
+      <section class="study-card" id="sec-address-rs-officers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📜 6. Articles 86 to 92: President's Address & Rajya Sabha Officers</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.88rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 87 : Special Address by President</div>
+              <p>President addresses joint sitting of Parliament at: (1) 1st session after each general election, and (2) 1st session of each fiscal year (Budget session). Followed by debate on <strong>Motion of Thanks</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 88 : Rights of Ministers & AG</div>
+              <p>Ministers & Attorney General have the right to speak and take part in proceedings of both Houses and committees, <strong>WITHOUT the right to vote</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 89 : RS Chairman & Deputy Chairman</div>
+              <p>• <strong>Chairman:</strong> Vice-President (Ex-officio, not a member of RS).<br>• <strong>Deputy Chairman:</strong> Elected by RS from amongst its members.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Articles 90–92 : Removal & Powers</div>
+              <p>Deputy Chairman removed by <strong>Effective Majority</strong> in RS. During removal, Chairman has <strong>NO right to vote</strong> (not a member); Deputy Chairman can vote in 1st instance (no casting vote).</p>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #d97706; background: var(--bg-card-secondary); margin-top: 1rem; font-size: 0.88rem;">
+            ⭐ <strong>Notable Fact:</strong> <strong>P. T. Usha</strong> became the first nominated woman MP appointed to the Rajya Sabha Panel of Vice-Chairpersons.
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: ARTICLES 93 TO 99 (SPEAKER, DEPUTY SPEAKER & PROTEM)
+           ==================================================================== -->
+      <section class="study-card" id="sec-ls-officers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 7. Articles 93 to 99: Speaker, Deputy Speaker & Pro-tem Speaker</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Speaker & Deputy Speaker (Arts 93–96)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Elected by Lok Sabha members by <strong>Simple Majority</strong>.</li>
+                <li class="study-bullet"><strong>1st Speaker:</strong> Ganesh Vasudev Mavalankar (G.V. Mavalankar).</li>
+                <li class="study-bullet"><strong>1st Deputy Speaker:</strong> M. Ananthasayanam Ayyangar.</li>
+                <li class="study-bullet"><strong>Resignation:</strong> Speaker resigns to Deputy Speaker and vice versa.</li>
+                <li class="study-bullet"><strong>Removal:</strong> Effective Majority in Lok Sabha (14 days notice).</li>
+                <li class="study-bullet">Speaker does not vacate office upon LS dissolution (continues till 1st meeting of new LS).</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Pro-tem Speaker & Secretariat (Arts 98–99)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Pro-tem Speaker (Art 99):</strong> Senior-most member appointed by President to administer oath to new MPs and conduct Speaker election. *(e.g. Bhartruhari Mahtab in 2024)*.</li>
+                <li class="study-bullet"><strong>Secretariat (Art 98):</strong> Each House has separate secretarial staff headed by Secretary-General.</li>
+                <li class="study-bullet"><strong>Election Dates:</strong> Speaker's election date fixed by <strong>President</strong>; Deputy Speaker's by <strong>Speaker</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: ARTICLES 100 & 101 (QUORUM, CASTING VOTE & VACATION)
+           ==================================================================== -->
+      <section class="study-card" id="sec-quorum-vacation">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📌 8. Articles 100 & 101: Quorum, Casting Vote & Vacation of Seats</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #2563eb; background: var(--bg-card-secondary);">
+              <h4 style="color: #2563eb; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">
+                Article 100 : Casting Vote & Quorum
+              </h4>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>100(1) Casting Vote:</strong> Presiding officer does not vote in 1st instance; votes <strong>ONLY in case of a Tie</strong> (बराबर मत होने पर निर्णायक मत).</li>
+                <li class="study-bullet"><strong>100(3) Quorum (गणपूर्ति):</strong> Minimum <strong>1/10th of total strength</strong> of the House (<strong>55 in Lok Sabha, 25 in Rajya Sabha</strong>).</li>
+                <li class="study-bullet"><strong>100(4):</strong> If no quorum, House must be adjourned.</li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #dc2626; background: var(--bg-card-secondary);">
+              <h4 style="color: #dc2626; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">
+                Article 101 : Vacation of Seats
+              </h4>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Double membership in both Houses not permitted.</li>
+                <li class="study-bullet">Simultaneous membership in Parliament & State Assembly not permitted (vacates in 14 days).</li>
+                <li class="study-bullet"><strong>60 Days Rule [101(4)]:</strong> If an MP is <strong>absent for 60 consecutive days without permission</strong>, seat may be declared vacant.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: ARTICLE 102 (DISQUALIFICATIONS & 10TH SCHEDULE)
+           ==================================================================== -->
+      <section class="study-card" id="sec-disqualifications">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🚫 9. Article 102: Disqualifications for Membership & 10th Schedule</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 102(1) : Constitutional Disqualifications</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">1. Holds any <strong>Office of Profit</strong> under Govt.</li>
+                <li class="study-bullet">2. Declared of <strong>unsound mind</strong> by competent court.</li>
+                <li class="study-bullet">3. Undischarged insolvent (दिवालिया).</li>
+                <li class="study-bullet">4. Not a citizen of India or acquired foreign citizenship.</li>
+                <li class="study-bullet">5. Disqualified under RPA 1951 (e.g. jail term $\ge$ 2 yrs).</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 102(2) : 10th Schedule (Anti-Defection)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">• Voluntarily resigns from political party.</li>
+                <li class="study-bullet">• Votes contrary to party whip without permission.</li>
+                <li class="study-bullet">• Independent MP joins any party.</li>
+                <li class="study-bullet">• Nominated MP joins a party after 6 months.</li>
+                <li class="study-bullet"><strong>Merger Exception:</strong> When <strong>2/3rd members</strong> agree to merge (91st CA 2003).</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #059669; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong>⚖️ Kihoto Hollohan vs Zachilhu Case (1992):</strong>
+            <p style="font-size: 0.88rem; margin-top: 0.25rem;">
+              The decision of the Speaker/Chairman under the 10th Schedule is <strong>subject to Judicial Review</strong> by the High Courts and Supreme Court on grounds of mala fide, perversity, or violation of constitutional mandate.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: ARTICLES 103 TO 106 & ARTICLE 73 RECAP
+           ==================================================================== -->
+      <section class="study-card" id="sec-privileges-recap">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🛡️ 10. Articles 103 to 106: Disqualification Authority, Privileges & Art 73 Recap</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 103</div>
+              <p style="font-size: 0.85rem;">
+                Disqualification under Art 102(1) decided by <strong>President</strong> based on <strong>binding opinion of Election Commission</strong>.
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 104</div>
+              <p style="font-size: 0.85rem;">
+                Penalty of <strong>₹500 per day</strong> for sitting and voting when disqualified or before taking oath.
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 105: Privileges</div>
+              <p style="font-size: 0.85rem;">
+                Freedom of speech in House; <strong>Civil arrest immunity 40 days before & after session</strong> (No criminal immunity).
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Article 73 Recap -->
+          <div class="callout-box" style="border-left-color: #d97706; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong style="color: #d97706;">📌 Recap from Executive: Article 73 (Extent of Union Executive Power):</strong>
+            <p style="font-size: 0.88rem; margin-top: 0.25rem;">
+              Executive power of the Union is co-extensive with the legislative power of Parliament (Union List & Concurrent List) and includes rights, authority, and jurisdiction under international treaties.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Lecture 9: Parliament Part-1</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>
