@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parliament Part-2 (संसद भाग-2) | GS Master Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 PARLIAMENT PART-2 (भाग 5)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search Money Bill (Art 110), Budget (Art 112), Ordinance (Art 123), PAC, PAC, Veto in EN/हिंदी..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-bills-intro" class="topic-link active"><span class="topic-icon">📜</span> 1. Article 107: Types of Bills & Lapsing Rules</a></li>
+          <li><a href="#sec-joint-sitting" class="topic-link"><span class="topic-icon">🏛️</span> 2. Article 108: Joint Sitting of Both Houses</a></li>
+          <li><a href="#sec-money-bills" class="topic-link"><span class="topic-icon">💰</span> 3. Articles 109 & 110: Money Bills & Speaker Role</a></li>
+          <li><a href="#sec-veto-powers" class="topic-link"><span class="topic-icon">🛡️</span> 4. Article 111: Presidential Veto Powers</a></li>
+          <li><a href="#sec-budget-procedure" class="topic-link"><span class="topic-icon">📊</span> 5. Articles 112–114: Budget & Cut Motions</a></li>
+          <li><a href="#sec-grants-funds" class="topic-link"><span class="topic-icon">🏦</span> 6. Articles 115–117 & 3 Central Funds</a></li>
+          <li><a href="#sec-ordinance-power" class="topic-link"><span class="topic-icon">⚡</span> 7. Article 123: Ordinance Power of President</a></li>
+          <li><a href="#sec-rs-special-powers" class="topic-link"><span class="topic-icon">🔴</span> 8. Special Powers of Rajya Sabha (Arts 249 & 312)</a></li>
+          <li><a href="#sec-financial-committees" class="topic-link"><span class="topic-icon">👥</span> 9. Financial Committees (PAC, Estimates, COPU)</a></li>
+          <li><a href="#sec-drsc-rules" class="topic-link"><span class="topic-icon">📋</span> 10. Departmental Committees & Speaker Rules</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Polity Lecture-10 / विषय:</div>
+        <h1 class="hero-title">Parliament Part-2</h1>
+        <div class="hero-title-hindi">भाग-5: विधायी प्रक्रियाएं, बजट, वीटो, अध्यादेश एवं संसदीय समितियां (अनुच्छेद 107 से 123)</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Legislative Procedures (Arts 107–111)</span>
+          <span class="hero-meta-pill">💰 Money Bill (Art 110) & Budget (Art 112)</span>
+          <span class="hero-meta-pill">⚡ Ordinance Power (Art 123) & 3 Vetoes</span>
+          <span class="hero-meta-pill">👥 PAC, Estimates & COPU Committees</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: ARTICLE 107 (BILLS & LAPSING RULES)
+           ==================================================================== -->
+      <section class="study-card" id="sec-bills-intro">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📜 1. Article 107: Introduction, Types of Bills & Lapsing on Dissolution</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <!-- Types of Bills -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">4 Types of Bills in Parliament</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">1. <strong>Ordinary Bill (साधारण विधेयक):</strong> Originates in either House; simple majority.</li>
+                <li class="study-bullet">2. <strong>Money Bill (धन विधेयक) [Art 110]:</strong> Originates ONLY in Lok Sabha with President's recommendation.</li>
+                <li class="study-bullet">3. <strong>Financial Bill (वित्तीय विधेयक) [Art 117]:</strong> Categories (I) and (III).</li>
+                <li class="study-bullet">4. <strong>Constitutional Amendment Bill [Art 368]:</strong> Special majority in both Houses.</li>
+              </ul>
+              <div style="margin-top: 0.5rem; font-size: 0.85rem; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;">
+                • <strong>Public Bill:</strong> Introduced by a Minister (7 days notice).<br>
+                • <strong>Private Member's Bill:</strong> Introduced by non-Minister MP (1 month notice).
+              </div>
+            </div>
+
+            <!-- Rules on Lapsing of Bills -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 107(4) : Lapsing of Bills on LS Dissolution</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">❌ <strong>Bill pending in Lok Sabha</strong> ➔ <strong>LAPSES</strong>.</li>
+                <li class="study-bullet">❌ <strong>Bill passed by LS but pending in RS</strong> ➔ <strong>LAPSES</strong>.</li>
+                <li class="study-bullet">✅ <strong>Bill pending in RS but NOT passed by LS</strong> ➔ <strong>DOES NOT LAPSE</strong>.</li>
+                <li class="study-bullet">✅ <strong>Bill passed by both Houses pending President's assent</strong> ➔ <strong>DOES NOT LAPSE</strong>.</li>
+                <li class="study-bullet">✅ <strong>Joint Sitting summoned by President before dissolution</strong> ➔ <strong>DOES NOT LAPSE</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: ARTICLE 108 (JOINT SITTING OF BOTH HOUSES)
+           ==================================================================== -->
+      <section class="study-card" id="sec-joint-sitting">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ 2. Article 108: Joint Sitting of Both Houses</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 0;">
+            <strong style="color: #2563eb; font-size: 1.05rem;">Deadlock Conditions (3 Cases):</strong>
+            <p style="font-size: 0.9rem; margin-top: 0.25rem;">
+              When an Ordinary Bill passed by one House is: (1) Rejected by the other House, (2) Houses disagree on amendments, or (3) More than <strong>6 months</strong> elapse without the bill being passed.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Procedure & Hierarchy</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Summoned by the <strong>President</strong>; provision borrowed from <strong>Australia</strong>.</li>
+                <li class="study-bullet"><strong>Presiding Officer Hierarchy:</strong>
+                  <br>1. <strong>Speaker of Lok Sabha</strong>
+                  <br>2. Deputy Speaker of Lok Sabha
+                  <br>3. Deputy Chairman of Rajya Sabha
+                  <br><em>(RS Chairman / VP CANNOT preside as he is not a member of Parliament).</em>
+                </li>
+                <li class="study-bullet">Passed by a <strong>Simple Majority of total members present and voting</strong>.</li>
+                <li class="study-bullet">Follows the <strong>Rules of Procedure of Lok Sabha</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Historic Joint Sittings (3 Times) & Exceptions</div>
+              <p style="font-size: 0.85rem; font-weight: 700; color: #7c3aed;">Joint Sittings held in India:</p>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.25rem; margin: 0.25rem 0 0.5rem;">
+                <li class="study-bullet">1. <strong>Dowry Prohibition Bill, 1960</strong> (May 1961)</li>
+                <li class="study-bullet">2. <strong>Banking Services Commission (Repeal) Bill, 1977</strong> (May 1978)</li>
+                <li class="study-bullet">3. <strong>Prevention of Terrorism Bill (POTA), 2002</strong> (March 2002)</li>
+              </ul>
+              <div style="background: rgba(220, 38, 38, 0.08); padding: 0.5rem; border-radius: var(--radius-sm); font-size: 0.82rem; color: #dc2626;">
+                🚫 <strong>Exceptions (NO Joint Sitting allowed):</strong><br>
+                • <strong>Money Bills [Art 110]</strong><br>
+                • <strong>Constitutional Amendment Bills [Art 368]</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: ARTICLES 109 & 110 (MONEY BILLS)
+           ==================================================================== -->
+      <section class="study-card" id="sec-money-bills">
+        <div class="study-card-header">
+          <h2 class="study-card-title">💰 3. Articles 109 & 110: Money Bills & Special Procedure</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <!-- Article 109 -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 109 : Special Procedure for Money Bills</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Introduced <strong>ONLY in Lok Sabha</strong> on the prior recommendation of the <strong>President</strong>.</li>
+                <li class="study-bullet">Rajya Sabha has restricted powers: cannot reject or amend; can only make recommendations within <strong>14 days</strong>.</li>
+                <li class="study-bullet">If not returned within 14 days, it is deemed passed by both Houses in original Lok Sabha form.</li>
+              </ul>
+            </div>
+
+            <!-- Article 110 -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 110 : Definition of Money Bill</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">• Imposition, abolition, remission, alteration of any tax.</li>
+                <li class="study-bullet">• Borrowing of money / financial obligations by Union.</li>
+                <li class="study-bullet">• Custody of Consolidated Fund or Contingency Fund.</li>
+                <li class="study-bullet">• Appropriation of money from Consolidated Fund.</li>
+                <li class="study-bullet">• Declaring any expenditure as charged on Consolidated Fund.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #d97706; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong style="color: #d97706;">📌 Speaker's Certification & Judicial Review:</strong>
+            <p style="font-size: 0.88rem; margin-top: 0.25rem;">
+              The <strong>Speaker of Lok Sabha certifies</strong> whether a Bill is a Money Bill or not, and his decision is final. A bill imposing fines/penalties or local taxes by municipal bodies is <strong>NOT a Money Bill</strong>.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: ARTICLE 111 (PRESIDENTIAL VETO POWERS)
+           ==================================================================== -->
+      <section class="study-card" id="sec-veto-powers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🛡️ 4. Article 111: Assent to Bills & 3 Presidential Veto Powers</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">1. Suspensive Veto (निलंबनकारी)</div>
+              <p style="font-size: 0.85rem;">
+                President returns bill for reconsideration. If passed again by Parliament (simple majority), <strong>President MUST give assent</strong>. *(Not available for Money Bills).*
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">2. Pocket Veto (जेबी वीटो)</div>
+              <p style="font-size: 0.85rem;">
+                President keeps bill pending indefinitely. Indian President's pocket is deeper than US President's (no constitution time limit). *(Used by Giani Zail Singh in 1986 on Post Office Bill).*
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">3. Absolute Veto (आत्यंतिक)</div>
+              <p style="font-size: 0.85rem;">
+                President withholds assent completely (Bill ends). Used for private members' bills or when cabinet resigns before assent.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #7c3aed; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong>⭐ 24th Constitutional Amendment Act, 1971:</strong>
+            <p style="font-size: 0.88rem; margin-top: 0.25rem;">
+              Made Presidential assent <strong>mandatory for Constitutional Amendment Bills under Article 368</strong> (President has NO veto power over Constitution amendments).
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: ARTICLES 112 TO 114 (BUDGET & CUT MOTIONS)
+           ==================================================================== -->
+      <section class="study-card" id="sec-budget-procedure">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📊 5. Articles 112–114: Annual Financial Statement (Budget) & Cut Motions</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 0;">
+            <h4 style="color: #2563eb; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+              Article 112 : Annual Financial Statement (वार्षिक वित्तीय विवरण)
+            </h4>
+            <p style="font-size: 0.9rem;">
+              Estimated receipts and expenditures laid before Parliament. <em>Note: The word 'Budget' is nowhere mentioned in the Constitution.</em>
+            </p>
+          </div>
+
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.5rem 0 0.75rem;">
+            Article 113: Estimates & 3 Cut Motions (Moved in Lok Sabha on Demands for Grants):
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">1. Policy Cut (नीतिगत)</div>
+              <p style="font-size: 0.85rem;"><em>"Amount be reduced to ₹1"</em> — Disapproves the underlying government policy.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">2. Economy Cut (मितव्ययिता)</div>
+              <p style="font-size: 0.85rem;"><em>"Amount be reduced by a specified sum"</em> — Suggests savings in proposed expenditure.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">3. Token Cut (सांकेतिक)</div>
+              <p style="font-size: 0.85rem;"><em>"Amount be reduced by ₹100"</em> — Expresses a specific grievance within GoI's sphere.</p>
+            </div>
+
+          </div>
+
+          <!-- 6 Stages of Budget Enactment -->
+          <div class="timeline-strip" style="grid-template-columns: repeat(6, 1fr); margin-top: 1.5rem;">
+            <div class="timeline-step"><span class="timeline-year">1</span><strong>Presentation</strong><p style="font-size:0.75rem;">Budget Speech</p></div>
+            <div class="timeline-step"><span class="timeline-year" style="background:#2563eb;">2</span><strong>Discussion</strong><p style="font-size:0.75rem;">General Debate</p></div>
+            <div class="timeline-step"><span class="timeline-year" style="background:#7c3aed;">3</span><strong>Scrutiny</strong><p style="font-size:0.75rem;">DRSCs Review</p></div>
+            <div class="timeline-step"><span class="timeline-year" style="background:#059669;">4</span><strong>Voting</strong><p style="font-size:0.75rem;">Demands (LS only)</p></div>
+            <div class="timeline-step"><span class="timeline-year" style="background:#d97706;">5</span><strong>Appropriation</strong><p style="font-size:0.75rem;">Art 114 Passed</p></div>
+            <div class="timeline-step"><span class="timeline-year" style="background:#dc2626;">6</span><strong>Finance Bill</strong><p style="font-size:0.75rem;">Tax proposals</p></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: ARTICLES 115-117 & 3 CENTRAL FUNDS
+           ==================================================================== -->
+      <section class="study-card" id="sec-grants-funds">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏦 6. Articles 115–117 & The Three Central Funds of India</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">1. Consolidated Fund of India [Art 266(1)]</div>
+              <p style="font-size: 0.85rem;">All revenue receipts, loans, and loan recoveries. Money withdrawn ONLY through Parliamentary Appropriation Act.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">2. Public Account of India [Art 266(2)]</div>
+              <p style="font-size: 0.85rem;">Provident funds, judicial deposits, savings bank remittances. Operated by Executive action (no vote needed).</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">3. Contingency Fund of India [Art 267]</div>
+              <p style="font-size: 0.85rem;">Disaster/unforeseen expenses. Held by <strong>President</strong>, operated by <strong>Finance Secretary</strong> (₹30,000 Cr corpus).</p>
+            </div>
+
+          </div>
+
+          <!-- Special Grants Box -->
+          <div class="callout-box" style="border-left-color: #7c3aed; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.85rem;">
+              <div>
+                <strong>Supplementary Grant (115):</strong> Insufficient budget allocation.
+              </div>
+              <div>
+                <strong>Vote on Account (116):</strong> 2 months advance to Executive pending budget.
+              </div>
+              <div>
+                <strong>Vote of Credit (116):</strong> <em>"Blank Cheque"</em> for unexpected urgent demands.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: ARTICLE 123 (ORDINANCE POWER)
+           ==================================================================== -->
+      <section class="study-card" id="sec-ordinance-power">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚡ 7. Article 123: Power of President to Promulgate Ordinances</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Conditions & Nature of Ordinance</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Issued when <strong>both Houses or either House is not in session</strong>.</li>
+                <li class="study-bullet">Has the <strong>same force and effect as an Act of Parliament</strong>.</li>
+                <li class="study-bullet">Cannot violate Fundamental Rights or amend Constitution.</li>
+                <li class="study-bullet">Can be withdrawn anytime by the President.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Maximum Life of an Ordinance</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Must be approved within <strong>6 weeks (42 days)</strong> from reassembly of Parliament.</li>
+                <li class="study-bullet"><strong>Maximum Life: 6 Months + 6 Weeks</strong> (Since max gap between two sessions is 6 months).</li>
+                <li class="study-bullet"><strong>Art 123</strong> for President (Centre) vs <strong>Art 213</strong> for Governor (State).</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: SPECIAL POWERS OF RAJYA SABHA
+           ==================================================================== -->
+      <section class="study-card" id="sec-rs-special-powers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🔴 8. Special Exclusive Powers of Rajya Sabha (Arts 249 & 312)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0; border-left: 4px solid #dc2626;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 249 : Legislation on State List</div>
+              <p style="font-size: 0.88rem; line-height: 1.6;">
+                Rajya Sabha can authorize Parliament to make laws on a subject in the <strong>State List</strong> in national interest by passing a resolution supported by <strong>2/3rd majority of members present and voting</strong> (valid for 1 year).
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0; border-left: 4px solid #059669;">
+              <div class="offer-plan-title" style="color: #059669;">Article 312 : Creation of All India Services</div>
+              <p style="font-size: 0.88rem; line-height: 1.6;">
+                Rajya Sabha can authorize Parliament to create one or more new <strong>All India Services (AIS)</strong> common to Union and States by passing a resolution supported by <strong>2/3rd majority present and voting</strong>.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: FINANCIAL COMMITTEES (PAC, ESTIMATES & COPU)
+           ==================================================================== -->
+      <section class="study-card" id="sec-financial-committees">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👥 9. Top 3 Financial Standing Committees of Parliament</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="gov-card communist">
+              <div class="gov-card-header">1. Public Accounts Committee (PAC)</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem;"><strong>Est: 1921</strong> (GoI Act 1919).<br>
+                <strong>Members: 22</strong> (15 Lok Sabha + 7 Rajya Sabha).<br>
+                <strong>Chairman:</strong> From <strong>Opposition</strong> (since 1967).<br>
+                <strong>Function:</strong> Audits CAG reports. CAG is <em>"Guide, Friend & Philosopher"</em> of PAC.</p>
+              </div>
+            </div>
+
+            <div class="gov-card monarchic">
+              <div class="gov-card-header">2. Estimates Committee</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem;"><strong>Est: 1950</strong> (John Mathai Committee).<br>
+                <strong>Members: 30 (ALL 30 from Lok Sabha)</strong>.<br>
+                <strong>Largest Parliamentary Committee</strong>.<br>
+                <strong>Function:</strong> Suggests economies in budget (Continuous Economy Committee).</p>
+              </div>
+            </div>
+
+            <div class="gov-card totalitarian">
+              <div class="gov-card-header">3. Committee on Public Undertakings</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem;"><strong>Est: 1964</strong> (Krishna Menon Committee).<br>
+                <strong>Members: 22</strong> (15 Lok Sabha + 7 Rajya Sabha).<br>
+                <strong>Chairman:</strong> From Lok Sabha.<br>
+                <strong>Function:</strong> Examines accounts and CAG reports of PSUs.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong style="color: #2563eb;">Common Rules of Financial Committees:</strong>
+            <p style="font-size: 0.88rem; margin-top: 0.25rem;">
+              Elected by Proportional Representation with STV • Term: <strong>1 Year</strong> • <strong>NO Minister can be a member</strong> of any Financial Committee.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: DRSCs & SPEAKER'S COMMITTEES
+           ==================================================================== -->
+      <section class="study-card" id="sec-drsc-rules">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📋 10. Departmental Standing Committees & Speaker's Chairmanships</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Departmental Standing Committees (DRSCs)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Total: 24 Committees</strong> (16 under Lok Sabha + 8 under Rajya Sabha).</li>
+                <li class="study-bullet"><strong>Strength: 31 Members each</strong> (21 from Lok Sabha + 10 from Rajya Sabha).</li>
+                <li class="study-bullet">Examine Demands for Grants and Bills related to concerned ministries.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Speaker & Deputy Speaker Special Rules</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Speaker is Ex-officio Chairman of:</strong>
+                  <br>• Business Advisory Committee (BAC)
+                  <br>• Rules Committee
+                  <br>• General Purposes Committee
+                </li>
+                <li class="study-bullet"><strong>Deputy Speaker:</strong> If nominated to any committee, he <strong>automatically becomes its Chairman</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Lecture 10: Parliament Part-2</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>
