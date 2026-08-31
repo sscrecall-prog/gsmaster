@@ -1,0 +1,1441 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Making of Constitution (संविधान का निर्माण) | Bilingual Premium Study Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 MAKING OF CONSTITUTION</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search in English or हिंदी (समितियां, सदस्य, तारीखें)..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-intro" class="topic-link active"><span class="topic-icon">📜</span> 1. Ideals & Forms of Govt (आदर्श व शासन प्रणाली)</a></li>
+          <li><a href="#sec-timeline" class="topic-link"><span class="topic-icon">⏳</span> 2. Constituent Assembly Timeline (घटनाक्रम)</a></li>
+          <li><a href="#sec-offers" class="topic-link"><span class="topic-icon">🇬🇧</span> 3. British Offers (ब्रिटेन के प्रस्ताव)</a></li>
+          <li><a href="#sec-cabinet" class="topic-link"><span class="topic-icon">🏛️</span> 4. Cabinet Mission & Seats (सीट आवंटन)</a></li>
+          <li><a href="#sec-interim" class="topic-link"><span class="topic-icon">👔</span> 5. Interim Government (अंतरिम सरकार 1946)</a></li>
+          <li><a href="#sec-objective" class="topic-link"><span class="topic-icon">🎯</span> 6. Objective Resolution (उद्देश्य प्रस्ताव)</a></li>
+          <li><a href="#sec-committees" class="topic-link"><span class="topic-icon">👥</span> 7. Major & Minor Committees (समितियां)</a></li>
+          <li><a href="#sec-drafting" class="topic-link"><span class="topic-icon">✍️</span> 8. Drafting Committee & Readings (प्रारूप समिति)</a></li>
+          <li><a href="#sec-sessions" class="topic-link"><span class="topic-icon">📅</span> 9. Sessions & Milestones (सत्र व उपलब्धियां)</a></li>
+          <li><a href="#sec-functions" class="topic-link"><span class="topic-icon">⚙️</span> 10. Dual Functions & Working (दोहरे कार्य)</a></li>
+          <li><a href="#sec-facts" class="topic-link"><span class="topic-icon">🐘</span> 11. Significant Facts (महत्वपूर्ण तथ्य)</a></li>
+          <li><a href="#sec-females" class="topic-link"><span class="topic-icon">👩</span> 12. Female Members (प्रमुख महिला सदस्य)</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION (PAGE 1)
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Topic / विषय:</div>
+        <h1 class="hero-title">Making of Constitution</h1>
+        <div class="hero-title-hindi">संविधान का निर्माण</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Constituent Assembly / संविधान सभा</span>
+          <span class="hero-meta-pill">📜 Constitutional History / संवैधानिक इतिहास</span>
+          <span class="hero-meta-pill">⏳ 1946 – 1950</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: IDEALS & FORMS OF GOVT (PAGE 2)
+           ==================================================================== -->
+      <section class="study-card" id="sec-intro">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📖 Making of Constitution / संविधान का निर्माण</h2>
+        </div>
+        <div class="study-card-body">
+          <div class="study-bullet-list">
+            
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">A Constitution lays out certain ideals that forms the basis of the kind of country a nation aspires to be.</span>
+                <span class="lang-hi">एक संविधान कुछ ऐसे आदर्शों को प्रस्तुत करता है जो उस राष्ट्र के आधार का निर्माण करते हैं जैसा वह देश बनना चाहता है।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><span class="key-term">Tradition of Constitution began in:</span> USA (in 1787).</span>
+                <span class="lang-hi"><span class="key-term">संविधान निर्माण की परंपरा की शुरुआत:</span> संयुक्त राज्य अमेरिका (USA) में (1787 में) हुई।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">While all democratic countries are likely to have a Constitution, it is not necessary that all countries that have a Constitution are democratic.</span>
+                <span class="lang-hi">यद्यपि सभी लोकतांत्रिक देशों में संविधान होने की संभावना होती है, लेकिन यह आवश्यक नहीं है कि जिन सभी देशों में संविधान है वे लोकतांत्रिक ही हों।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><span class="key-term">Independence of USA:</span> 4th July 1776.</span>
+                <span class="lang-hi"><span class="key-term">अमेरिका (USA) की स्वतंत्रता:</span> 4 जुलाई 1776।</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Highlight Box -->
+          <div class="callout-box rigid-flexible">
+            <div class="lang-en">💡 India's Constitution is partly rigid; partly flexible.</div>
+            <div class="lang-hi">💡 भारत का संविधान अंशतः कठोर और अंशतः लचीला (partly rigid; partly flexible) है।</div>
+          </div>
+
+          <!-- Other Forms of Government -->
+          <h3 style="font-family: var(--font-family-display); font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 1.75rem 0 0.85rem;">
+            Other forms of Government / सरकार के अन्य रूप:
+          </h3>
+
+          <div class="gov-forms-grid">
+            
+            <div class="gov-card communist">
+              <div class="gov-card-header">Communist / साम्यवादी</div>
+              <div class="gov-card-body">
+                <div class="bilingual-block">
+                  <span class="lang-en">Source or means of production controlled by government, e.g. China, Laos, North Korea, Cuba, Vietnam.</span>
+                  <span class="lang-hi">उत्पादन के साधन या स्रोत सरकार द्वारा नियंत्रित होते हैं, जैसे- चीन, लाओस, उत्तर कोरिया, क्यूबा, वियतनाम।</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gov-card monarchic">
+              <div class="gov-card-header">Monarchic / राजशाही</div>
+              <div class="gov-card-body">
+                <div class="bilingual-block">
+                  <span class="lang-en">A government by a single person ➔ specifically King or a monarch. E.g. North Korea.</span>
+                  <span class="lang-hi">एक ही व्यक्ति द्वारा संचालित शासन ➔ विशेष रूप से राजा या सम्राट द्वारा। उदाहरण: उत्तर कोरिया।</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gov-card totalitarian">
+              <div class="gov-card-header">Totalitarian / सर्वाधिकारवादी</div>
+              <div class="gov-card-body">
+                <div class="bilingual-block">
+                  <span class="lang-en">It refers to total control over lives of citizens by whoever is ruling.</span>
+                  <span class="lang-hi">इसका तात्पर्य शासन करने वाले द्वारा नागरिकों के संपूर्ण जीवन पर पूर्ण नियंत्रण से है।</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gov-card oligarchic">
+              <div class="gov-card-header">Oligarchic / कुलीनतंत्रीय</div>
+              <div class="gov-card-body">
+                <div class="bilingual-block">
+                  <span class="lang-en">A government of few. e.g. Iran, Russia</span>
+                  <span class="lang-hi">कुछ ही व्यक्तियों का समूह द्वारा शासन। उदाहरण: ईरान, रूस।</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: CONSTITUENT ASSEMBLY TIMELINE (PAGE 2)
+           ==================================================================== -->
+      <section class="study-card" id="sec-timeline">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⏳ Constituent Assembly Timeline / संविधान सभा की मांग का घटनाक्रम</h2>
+        </div>
+        <div class="study-card-body">
+          <div class="timeline-strip">
+            
+            <div class="timeline-step">
+              <div class="timeline-year">1928</div>
+              <div class="timeline-text">
+                <div class="bilingual-block">
+                  <span class="lang-en">The early draft of the Indian Constitution (<strong>Nehru Report</strong>) was submitted by the All Parties Conference at Lucknow ➔ chaired by <strong>Motilal Nehru</strong>.</span>
+                  <span class="lang-hi">भारतीय संविधान का प्रारंभिक प्रारूप (<strong>नेहरू रिपोर्ट</strong>) लखनऊ में सर्वदलीय सम्मेलन द्वारा प्रस्तुत किया गया था ➔ जिसकी अध्यक्षता <strong>मोतीलाल नेहरू</strong> ने की थी।</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="timeline-year">1934</div>
+              <div class="timeline-text">
+                <div class="bilingual-block">
+                  <span class="lang-en"><strong>M. N. Roy</strong> first proposed the idea of a Constituent Assembly for India.</span>
+                  <span class="lang-hi"><strong>एम. एन. रॉय (M. N. Roy)</strong> ने पहली बार भारत के लिए संविधान सभा के गठन का औपचारिक विचार प्रस्तुत किया।</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="timeline-year">1935</div>
+              <div class="timeline-text">
+                <div class="bilingual-block">
+                  <span class="lang-en">The <strong>Indian National Congress</strong> officially demanded a Constitutional Assembly.</span>
+                  <span class="lang-hi"><strong>भारतीय राष्ट्रीय कांग्रेस (INC)</strong> ने आधिकारिक रूप से पहली बार संविधान सभा की मांग की।</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: BRITISH OFFERS & CABINET MISSION (PAGE 3)
+           ==================================================================== -->
+      <section class="study-card" id="sec-offers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🇬🇧 Offers from Britain / ब्रिटिश सरकार के प्रस्ताव</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="british-offers-grid">
+            
+            <!-- Left Column: The 3 British Proposals -->
+            <div>
+              <div class="offer-plan-card">
+                <div class="offer-plan-title">1. August Offer: 1940 (अगस्त प्रस्ताव: 1940)</div>
+                <div class="study-bullet-list">
+                  <div class="study-bullet">
+                    <div class="bilingual-block">
+                      <span class="lang-en">Proposed by British Viceroy Lord Linlithgow on August 8, 1940, to gain Indian support during World War II.</span>
+                      <span class="lang-hi">द्वितीय विश्व युद्ध में भारतीयों का सहयोग पाने के लिए 8 अगस्त 1940 को ब्रिटिश वायसराय लॉर्ड लिनलिथगो द्वारा पेश किया गया।</span>
+                    </div>
+                  </div>
+                  <div class="study-bullet">
+                    <div class="bilingual-block">
+                      <span class="lang-en">The offer promised Dominion Status for India after the war</span>
+                      <span class="lang-hi">इस प्रस्ताव में युद्ध के पश्चात भारत को 'डोमिनियन स्टेटस' (औपनिवेशिक स्वराज्य) देने का वादा किया गया था।</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="offer-plan-card">
+                <div class="offer-plan-title">2. Cripps Proposal: 1942 (क्रिप्स मिशन: 1942)</div>
+                <div class="study-bullet-list">
+                  <div class="study-bullet">
+                    <div class="bilingual-block">
+                      <span class="lang-en">Offering India dominion status after the war, along with the creation of a Constituent Assembly to draft a new constitution</span>
+                      <span class="lang-hi">युद्ध के बाद भारत को डोमिनियन स्टेटस देने तथा नए संविधान निर्माण हेतु संविधान सभा के गठन की पेशकश की गई।</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="offer-plan-card">
+                <div class="offer-plan-title">3. Wavell Plan: 1945 (वेवेल योजना: 1945)</div>
+                <div class="study-bullet-list">
+                  <div class="study-bullet">
+                    <div class="bilingual-block">
+                      <span class="lang-en">Also Known as <strong>Shimla Conference</strong></span>
+                      <span class="lang-hi">इसे <strong>शिमला सम्मेलन (Shimla Conference)</strong> के नाम से भी जाना जाता है।</span>
+                    </div>
+                  </div>
+                  <div class="study-bullet">
+                    <div class="bilingual-block">
+                      <span class="lang-en">The Wavell Plan was a 1945 proposal by India's Viceroy, Lord Wavell, to resolve the political deadlock by creating a new, interim Executive Council with equal representation for Hindus and Muslims</span>
+                      <span class="lang-hi">वेवेल योजना 1945 में वायसराय लॉर्ड वेवेल द्वारा राजनीतिक गतिरोध दूर करने हेतु हिंदुओं व मुसलमानों के समान प्रतिनिधित्व वाली अंतरिम कार्यकारी परिषद बनाने का प्रस्ताव था।</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Dominion Status & Rejection Notes -->
+            <div>
+              <div class="callout-box" style="border-left-color: var(--accent-gold); background: rgba(245, 158, 11, 0.05);">
+                <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 0.4rem;">
+                  Dominion Status / डोमिनियन स्टेटस
+                </h4>
+                <div class="bilingual-block" style="margin-bottom: 0.6rem;">
+                  <span class="lang-en" style="font-size: 0.85rem; color: var(--text-secondary);">It is a status given to certain countries that allowed them to be self-governing while remaining part of the British empire. The term "Dominion" means "that which is mastered or ruled".</span>
+                  <span class="lang-hi" style="font-size: 0.85rem;">यह ब्रिटिश साम्राज्य का हिस्सा रहते हुए आंतरिक स्वशासन चलाने का दर्जा था। "Dominion" का शाब्दिक अर्थ "जिस पर शासन या अधिकार हो" होता है।</span>
+                </div>
+                
+                <div class="callout-box dominion-quote" style="margin: 0; padding: 0.6rem 0.85rem;">
+                  <strong style="font-size: 0.825rem; color: var(--accent-crimson);">Comment On Dominion Status:</strong><br>
+                  <div class="bilingual-block" style="margin-top: 0.2rem;">
+                    <span class="lang-en" style="font-size: 0.85rem;"><em>"Dominion status is dead as a door nail"</em> : Said bu J.L Nehru</span>
+                    <span class="lang-hi" style="font-size: 0.85rem;"><em>"डोमिनियन स्टेटस पूरी तरह निष्प्राण / मृतप्राय हो चुका है"</em> : जवाहरलाल नेहरू द्वारा कहा गया।</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="callout-box" style="border-left-color: var(--accent-crimson); background: rgba(220, 38, 38, 0.06); margin-top: 0.85rem;">
+                <strong style="color: var(--accent-crimson); font-size: 0.9rem;">🚫 Rejection Reason / अस्वीकृति का कारण:</strong>
+                <div class="bilingual-block" style="margin-top: 0.35rem;">
+                  <span class="lang-en" style="font-size: 0.875rem;"><strong>All three plans were rejected</strong> because Congress Demands Purna Swaraj and Britishers offered Dominion Status.</span>
+                  <span class="lang-hi" style="font-size: 0.875rem;"><strong>तीनों प्रस्तावों को खारिज कर दिया गया</strong> क्योंकि कांग्रेस की मांग 'पूर्ण स्वराज' की थी, जबकि अंग्रेज 'डोमिनियन स्टेटस' दे रहे थे।</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Cabinet Mission Plan (Page 3 bottom) -->
+          <div style="margin-top: 1.5rem; background: var(--bg-card-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <h3 style="font-family: var(--font-family-display); font-size: 1.15rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;">
+              Cabinet Mission Plan: 1946 (कैबिनेट मिशन योजना: 1946)
+            </h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <strong style="color: var(--text-primary); font-size: 0.9rem;">Three British Cabinet members (तीन सदस्य):</strong>
+                <ol style="padding-left: 1.25rem; margin-top: 0.4rem; font-size: 0.9rem;">
+                  <li><strong>Pethick-Lawrence</strong> (chairman) / पैथिक-लॉरेंस (अध्यक्ष),</li>
+                  <li><strong>Stafford Cripps</strong> / स्टैफोर्ड क्रिप्स,</li>
+                  <li><strong>A.V.Alexander</strong> / ए.वी. अलेक्जेंडर।</li>
+                </ol>
+              </div>
+              <div style="background: var(--bg-card); padding: 0.85rem; border-radius: var(--radius-sm); border-left: 3px solid var(--success);">
+                <div class="bilingual-block">
+                  <span class="lang-en" style="font-size: 0.875rem;"><strong>Accepted:</strong> Only Cabinet Mission Plan was accepted by both the Congress and the Muslim League, hence Constituent Assembly was formed according to it.</span>
+                  <span class="lang-hi" style="font-size: 0.875rem;"><strong>स्वीकृति:</strong> केवल कैबिनेट मिशन योजना को ही कांग्रेस और मुस्लिम लीग दोनों ने स्वीकार किया था, इसलिए संविधान सभा का गठन इसी के अनुसार हुआ।</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: CABINET MISSION SEATS BREAKDOWN & ALLOCATION (PAGES 4 - 5)
+           ==================================================================== -->
+      <section class="study-card" id="sec-cabinet">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ Tryst with Destiny & Seat Allocation Tree</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <!-- Tryst with Destiny Callout (Page 4) -->
+          <div class="callout-box" style="border-left-color: var(--primary); background: var(--primary-light); margin-top: 0;">
+            <strong style="font-size: 1rem; color: var(--primary);">🎙️ Tryst with Destiny (भाग्य से साक्षात्कार):</strong>
+            <div class="bilingual-block" style="margin-top: 0.35rem;">
+              <span class="lang-en" style="font-size: 0.925rem;">In his famous speech <strong>"Tryst with Destiny"</strong> delivered on <strong>14th Aug 1947</strong> before Constituent Assembly, Nehru referred to Gandhiji, as <em>"The ambition of the greatest man of our generation has been to wipe every tear from every eye"</em>.</span>
+              <span class="lang-hi" style="font-size: 0.925rem;">14 अगस्त 1947 को संविधान सभा के समक्ष दिए गए अपने प्रसिद्ध भाषण <strong>"Tryst with Destiny"</strong> में नेहरू जी ने गांधीजी का उल्लेख करते हुए कहा था, <em>"हमारी पीढ़ी के सबसे महान व्यक्ति की महत्वाकांक्षा हर आंख से हर आंसू पोंछने की रही है"</em>।</span>
+            </div>
+          </div>
+
+          <!-- Tree Diagram (Page 4 Recreation) -->
+          <div class="tree-diagram">
+            <div class="tree-root">389 Mambers (कुल सदस्य)</div>
+            
+            <div class="tree-branches">
+              
+              <!-- British India Branch -->
+              <div class="tree-branch-card">
+                <div class="branch-pill pill-blue">296</div>
+                <div class="bilingual-block">
+                  <span class="lang-en" style="font-weight: 700; font-size: 0.95rem;">Elected Members Representing British India</span>
+                  <span class="lang-hi" style="font-weight: 700; font-size: 0.95rem;">ब्रिटिश भारत का प्रतिनिधित्व करने वाले निर्वाचित सदस्य</span>
+                </div>
+                
+                <div class="sub-branches">
+                  <div class="sub-branch-item">
+                    <strong style="color: var(--primary); font-size: 1.15rem;">292</strong>
+                    <div class="bilingual-block" style="margin-top: 0.25rem;">
+                      <span class="lang-en" style="font-size: 0.8rem;">Elected From 11 Governor Provinces of British India.</span>
+                      <span class="lang-hi" style="font-size: 0.8rem;">ब्रिटिश भारत के 11 गवर्नर प्रांतों से निर्वाचित।</span>
+                    </div>
+                  </div>
+                  <div class="sub-branch-item">
+                    <strong style="color: var(--accent-purple); font-size: 1.15rem;">4</strong>
+                    <div class="bilingual-block" style="margin-top: 0.25rem;">
+                      <span class="lang-en" style="font-size: 0.8rem;">4 members came from Chief Commissioner's Provinces (<strong>Ajmer-Marwar, Coorg, Delhi, Baluchistan</strong>)</span>
+                      <span class="lang-hi" style="font-size: 0.8rem;">4 सदस्य मुख्य आयुक्त प्रांतों से आए (<strong>अजमेर-मारवाड़, कुर्ग, दिल्ली, बलूचिस्तान</strong>)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Princely States Branch -->
+              <div class="tree-branch-card">
+                <div class="branch-pill pill-yellow">93</div>
+                <div class="bilingual-block">
+                  <span class="lang-en" style="font-weight: 700; font-size: 0.95rem;">Nominated Members Representing Princely States.</span>
+                  <span class="lang-hi" style="font-weight: 700; font-size: 0.95rem;">देसी रियासतों का प्रतिनिधित्व करने वाले मनोनीत सदस्य</span>
+                </div>
+                <div class="study-bullet-list" style="margin-top: 0.75rem;">
+                  <div class="study-bullet" style="font-size: 0.85rem;">
+                    <div class="bilingual-block">
+                      <span class="lang-en">Not Elected but rulers nominates them.</span>
+                      <span class="lang-hi">ये निर्वाचित नहीं थे बल्कि देसी रियासतों के राजाओं द्वारा मनोनीत किए गए थे।</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Seats Allocation & Election Results (Page 5) -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem;">
+            
+            <div>
+              <h3 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem;">
+                Seats Allocation Principles (सीट आवंटन नियम)
+              </h3>
+              <div class="study-bullet-list">
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Seats allocated to each British province, were to be divided among three principal communities: <strong>Muslim, Sikh and General</strong>.</span>
+                    <span class="lang-hi">प्रांतों की सीटों को 3 प्रमुख समुदायों में बांटा गया: <strong>मुस्लिम, सिख और सामान्य</strong>।</span>
+                  </div>
+                </div>
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>One seat</strong> was to be allotted per <strong>1 million population</strong>.</span>
+                    <span class="lang-hi">प्रत्येक <strong>10 लाख (1 Million)</strong> की आबादी पर <strong>1 सीट</strong> निर्धारित की गई थी।</span>
+                  </div>
+                </div>
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">It was <strong>partly elected and partly nominated</strong>.</span>
+                    <span class="lang-hi">यह <strong>आंशिक रूप से निर्वाचित और आंशिक रूप से मनोनीत</strong> निकाय था।</span>
+                  </div>
+                </div>
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Method of election (Indirect Elections): <strong>Proportional Representation + Single Transferable Vote</strong>.</span>
+                    <span class="lang-hi">चुनाव प्रणाली (अप्रत्यक्ष): <strong>आनुपातिक प्रतिनिधित्व + एकल संक्रमणीय मत</strong>।</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div style="background: var(--bg-card-secondary); padding: 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+                <h3 style="font-family: var(--font-family-display); font-size: 1rem; font-weight: 800; color: var(--accent-gold); margin-bottom: 0.5rem;">
+                  🗳️ Election Results (July-August 1946 / चुनाव परिणाम)
+                </h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.88rem;">
+                  <li>• <strong>Congress (INC) / कांग्रेस:</strong> 208 seats (सीटें)</li>
+                  <li>• <strong>Muslim League / मुस्लिम लीग:</strong> 73 seats (सीटें)</li>
+                  <li>• <strong>Independent / स्वतंत्र:</strong> 15 seats (सीटें)</li>
+                  <li style="border-top: 1px dashed var(--border-color); padding-top: 0.4rem; color: var(--accent-crimson); font-weight: 700;">
+                    • After boycott of Muslim League, Remaining seats: <strong>299 (after partition)</strong><br>
+                    <span class="lang-hi" style="font-size: 0.85em; font-weight: 600;">(विभाजन के पश्चात संविधान सभा में शेष सदस्य संख्या: 299)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: INTERIM GOVERNMENT 1946 (PAGE 5)
+           ==================================================================== -->
+      <section class="study-card" id="sec-interim">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👔 Interim Government / अंतरिम सरकार (2nd September 1946)</h2>
+        </div>
+        <div class="study-card-body">
+          <div class="study-bullet-list" style="margin-bottom: 1.25rem;">
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><strong>2nd September 1946:</strong> The Interim Government of India was formed. It lasted until India's independence on 15th August 1947, and the partition of the country into India and Pakistan.</span>
+                <span class="lang-hi"><strong>2 सितंबर 1946:</strong> भारत की अंतरिम सरकार का गठन हुआ जो 15 अगस्त 1947 को स्वतंत्रता व विभाजन तक बनी रही।</span>
+              </div>
+            </div>
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><strong>President of the Executive Council (Viceroy & Governor-General):</strong> Viscount Wavell (till Feb 1947); Lord Mountbatten (from Feb 1947)</span>
+                <span class="lang-hi"><strong>कार्यकारी परिषद के अध्यक्ष (वायसराय):</strong> विस्काउंट वेवेल (फरवरी 1947 तक); लॉर्ड माउंटबेटन (फरवरी 1947 से)</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem;">
+            Position held by Members of Interim Government (अंतरिम सरकार के सदस्यों के पद)
+          </h3>
+
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Portfolio / विभाग</th>
+                  <th>Member Name / सदस्य का नाम</th>
+                  <th>Party</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Commander-in-Chief</strong></span>
+                      <span class="lang-hi">प्रधान सेनापति</span>
+                    </div>
+                  </td>
+                  <td>Sir Claude Auchinleck (सर क्लाउड ऑचिनलेक)</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Vice President, External Affairs & Commonwealth Relations</strong></span>
+                      <span class="lang-hi">उपाध्यक्ष, विदेश मामले तथा राष्ट्रमंडल संबंध</span>
+                    </div>
+                  </td>
+                  <td>Jawaharlal Nehru (जवाहरलाल नेहरू)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Home Affairs, Information and Broadcasting</strong></span>
+                      <span class="lang-hi">गृह मामले, सूचना एवं प्रसारण</span>
+                    </div>
+                  </td>
+                  <td>Sardar Vallabhbhai Patel (सरदार वल्लभभाई पटेल)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Agriculture and Food</strong></span>
+                      <span class="lang-hi">खाद्य एवं कृषि</span>
+                    </div>
+                  </td>
+                  <td>Rajendra Prasad (डॉ. राजेंद्र प्रसाद)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Commerce</strong></span>
+                      <span class="lang-hi">वाणिज्य</span>
+                    </div>
+                  </td>
+                  <td>Ibrahim Ismail Chundrigar (इब्राहिम इस्माइल चुंदरीगर)</td>
+                  <td><span class="party-badge party-ml">ML</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Defence</strong></span>
+                      <span class="lang-hi">रक्षा</span>
+                    </div>
+                  </td>
+                  <td>Baldev Singh (सरदार बलदेव सिंह)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Finance</strong></span>
+                      <span class="lang-hi">वित्त</span>
+                    </div>
+                  </td>
+                  <td>Liaquat Ali Khan (लियाकत अली खान)</td>
+                  <td><span class="party-badge party-ml">ML</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Health</strong></span>
+                      <span class="lang-hi">स्वास्थ्य</span>
+                    </div>
+                  </td>
+                  <td>Ghazanfar Ali Khan (गजनफर अली खान)</td>
+                  <td><span class="party-badge party-ml">ML</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Labour</strong></span>
+                      <span class="lang-hi">श्रम</span>
+                    </div>
+                  </td>
+                  <td>Jagjivan Ram (बाबू जगजीवन राम)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Law</strong></span>
+                      <span class="lang-hi">विधि / कानून</span>
+                    </div>
+                  </td>
+                  <td>Jogendra Nath Mandal (जोगेंद्र नाथ मंडल)</td>
+                  <td><span class="party-badge party-ml">ML</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Education and Arts</strong></span>
+                      <span class="lang-hi">शिक्षा एवं कला</span>
+                    </div>
+                  </td>
+                  <td>C. Rajagopalachari (सी. राजगोपालाचारी)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Railways and Communication, Post and Air</strong></span>
+                      <span class="lang-hi">रेलवे एवं संचार, डाक व वायु</span>
+                    </div>
+                  </td>
+                  <td>Abdur Rab Nishtar (अब्दुर रब निश्तार)</td>
+                  <td><span class="party-badge party-ml">ML</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Industries and Supplies</strong></span>
+                      <span class="lang-hi">उद्योग एवं नागरिक आपूर्ति</span>
+                    </div>
+                  </td>
+                  <td>John Mathai (डॉ. जॉन मथाई)</td>
+                  <td><span class="party-badge party-inc">INC</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: OBJECTIVE RESOLUTION (PAGE 6)
+           ==================================================================== -->
+      <section class="study-card" id="sec-objective">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🎯 Objective Resolution / उद्देश्य प्रस्ताव</h2>
+        </div>
+        <div class="study-card-body">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="callout-box" style="border-left-color: var(--primary); margin: 0;">
+              <strong style="color: var(--primary); font-size: 1rem;">13th December 1946 (13 दिसंबर 1946):</strong>
+              <div class="bilingual-block" style="margin-top: 0.35rem;">
+                <span class="lang-en">Objective Resolution was presented by <strong>Jawaharlal Nehru</strong> before the Constituent Assembly.</span>
+                <span class="lang-hi"><strong>जवाहरलाल नेहरू</strong> द्वारा संविधान सभा के समक्ष ऐतिहासिक 'उद्देश्य प्रस्ताव' पेश किया गया।</span>
+              </div>
+            </div>
+            <div class="callout-box" style="border-left-color: var(--success); margin: 0;">
+              <strong style="color: var(--success); font-size: 1rem;">22nd January 1947 (22 जनवरी 1947):</strong>
+              <div class="bilingual-block" style="margin-top: 0.35rem;">
+                <span class="lang-en">Objective Resolution was <strong>accepted</strong> by the Constituent Assembly.</span>
+                <span class="lang-hi">उद्देश्य प्रस्ताव को संविधान सभा द्वारा सर्वसम्मति से <strong>स्वीकार (Adopted)</strong> किया गया।</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: COMMITTEES OF CONSTITUENT ASSEMBLY (PAGE 6)
+           ==================================================================== -->
+      <section class="study-card" id="sec-committees">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👥 Committees of the Constituent Assembly / संविधान सभा की समितियां</h2>
+        </div>
+        <div class="study-card-body">
+          <div class="callout-box" style="border-left-color: var(--accent-purple); background: var(--bg-card-secondary); margin-top: 0;">
+            <div class="bilingual-block">
+              <span class="lang-en">The Constituent Assembly of India formed <strong>8 Major</strong> and <strong>13 Minor</strong> committees.</span>
+              <span class="lang-hi">भारतीय संविधान सभा ने कुल <strong>8 प्रमुख (Major)</strong> तथा <strong>13 लघु (Minor)</strong> समितियों का गठन किया था।</span>
+            </div>
+          </div>
+
+          <!-- Major Committees -->
+          <h3 style="font-family: var(--font-family-display); font-size: 1.1rem; font-weight: 800; color: var(--primary); margin: 1.5rem 0 0.85rem;">
+            🔘 Major Committees (8 प्रमुख समितियां)
+          </h3>
+
+          <div class="committees-grid">
+            
+            <div class="leader-committee-card">
+              <div class="leader-name">👤 Jawahar Lal Nehru (जवाहरलाल नेहरू)</div>
+              <ul class="study-bullet-list">
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Union power Committee</span>
+                    <span class="lang-hi">संघ शक्ति समिति</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Union Constitution Committee</span>
+                    <span class="lang-hi">संघ संविधान समिति</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">State Committee</span>
+                    <span class="lang-hi">राज्य समिति (राज्यों से समझौता करने वाली)</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="leader-committee-card">
+              <div class="leader-name">👤 Sardar Patel (सरदार वल्लभभाई पटेल)</div>
+              <ul class="study-bullet-list">
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Provincial Constitution Committee</span>
+                    <span class="lang-hi">प्रांतीय संविधान समिति</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Advisory Committee on Fundamental Rights, Minorities, and Tribal and Excluded Area</span>
+                    <span class="lang-hi">मौलिक अधिकारों, अल्पसंख्यकों एवं जनजातीय व बहिष्कृत क्षेत्रों संबंधी सलाहकार समिति</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="leader-committee-card">
+              <div class="leader-name">👤 Rajendra Prasad (डॉ. राजेंद्र प्रसाद)</div>
+              <ul class="study-bullet-list">
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Rules of Procedure Committee</span>
+                    <span class="lang-hi">प्रक्रिया नियम समिति</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Steering Committee</span>
+                    <span class="lang-hi">संचालन समिति</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="leader-committee-card">
+              <div class="leader-name">👤 B.R Ambedkar (डॉ. बी.आर. अंबेडकर)</div>
+              <ul class="study-bullet-list">
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>Drafting Committee</strong></span>
+                    <span class="lang-hi"><strong>प्रारूप समिति (Drafting Committee)</strong></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Minor Committees (13) -->
+          <h3 style="font-family: var(--font-family-display); font-size: 1.1rem; font-weight: 800; color: var(--accent-gold); margin: 2rem 0 0.85rem;">
+            🟡 Minor Committees (13 लघु समितियां)
+          </h3>
+
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Committee Name (समिति का नाम)</th>
+                  <th>Chairman / Head (अध्यक्ष)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Finance and Staff Committee</span>
+                      <span class="lang-hi">वित्त एवं कर्मचारी समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Dr. Rajendra Prasad (डॉ. राजेंद्र प्रसाद)</strong></td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Ad-hoc Committee on the National Flag</span>
+                      <span class="lang-hi">राष्ट्रीय ध्वज तदर्थ समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Dr. Rajendra Prasad (डॉ. राजेंद्र प्रसाद)</strong></td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Credential Committee</span>
+                      <span class="lang-hi">क्रेडेंशियल (प्रत्यायक) समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Alladi Krishnaswamy Ayyar (अल्लादी कृष्णास्वामी अय्यर)</strong></td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">House Committee</span>
+                      <span class="lang-hi">सदन समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>B. Pattabhi Sitaramayya (बी. पट्टाभि सीतारमैया)</strong></td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Committee on Chief Commissioners Provinves</span>
+                      <span class="lang-hi">मुख्य आयुक्त प्रांतों संबंधी समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>B. Pattabhi Sitaramayya (बी. पट्टाभि सीतारमैया)</strong></td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Order of Business Committee</span>
+                      <span class="lang-hi">कार्य संचालन समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Dr. K.M Munshi (डॉ. के.एम. मुंशी)</strong></td>
+                </tr>
+                <tr>
+                  <td>7.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Committee on the functions of the Constituent Assembly</span>
+                      <span class="lang-hi">संविधान सभा के कार्य संबंधी समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>G.V Mavalankar (जी.वी. मावलंकर)</strong></td>
+                </tr>
+                <tr>
+                  <td>8.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Ad-hoc committee on the Supreme Court</span>
+                      <span class="lang-hi">सर्वोच्च न्यायालय तदर्थ समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>S. Varadachariar (एस. वरदाचारी)</strong></td>
+                </tr>
+                <tr>
+                  <td>9.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Ad-hoc Committee on Citizenship</span>
+                      <span class="lang-hi">नागरिकता तदर्थ समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>S. Varadachariar (एस. वरदाचारी)</strong></td>
+                </tr>
+                <tr>
+                  <td>10.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Expert Committee on the Financial Provisions of the Union Constitution</span>
+                      <span class="lang-hi">संघीय वित्तीय प्रावधान विशेषज्ञ समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Nalini Ranjan Sarkar (नलिनी रंजन सरकार)</strong></td>
+                </tr>
+                <tr>
+                  <td>11.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Linguistic Provinces Commission</span>
+                      <span class="lang-hi">भाषाई प्रांत आयोग</span>
+                    </div>
+                  </td>
+                  <td><strong>S.K Dhar (एस.के. धर)</strong></td>
+                </tr>
+                <tr>
+                  <td>12.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Special Committee to Examine the Draft Constitution</span>
+                      <span class="lang-hi">प्रारूप संविधान जांच विशेष समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>J.L.Nehru (जवाहरलाल नेहरू)</strong></td>
+                </tr>
+                <tr>
+                  <td>13.</td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">Press Gallery Committee</span>
+                      <span class="lang-hi">प्रेस दीर्घा समिति</span>
+                    </div>
+                  </td>
+                  <td><strong>Usha Nath Sen (उषा नाथ सेन)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: DRAFTING COMMITTEE & READINGS (PAGE 7)
+           ==================================================================== -->
+      <section class="study-card" id="sec-drafting">
+        <div class="study-card-header">
+          <h2 class="study-card-title">✍️ Drafting Committee & Readings / प्रारूप समिति व वाचन</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="study-bullet-list">
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><span class="key-term">Set up on:</span> 29th August 1947.</span>
+                <span class="lang-hi"><span class="key-term">गठन की तिथि:</span> 29 अगस्त 1947।</span>
+              </div>
+            </div>
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><span class="key-term">Total members of Drafting Committee:</span> 7</span>
+                <span class="lang-hi"><span class="key-term">प्रारूप समिति के कुल सदस्य:</span> 7</span>
+              </div>
+            </div>
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en"><span class="key-term">Chairman:</span> <strong>Dr. B. R. Ambedkar</strong> (also known as <em>"Modern Manuh"</em> or <em>"Modern Man"</em>)</span>
+                <span class="lang-hi"><span class="key-term">अध्यक्ष:</span> <strong>डॉ. बी. आर. अंबेडकर</strong> (जिन्हें <em>"आधुनिक मनु"</em> या <em>"Modern Man"</em> कहा जाता है)</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.5rem 0 0.65rem;">
+            Other Members of Drafting Committee / प्रारूप समिति के अन्य 6 सदस्य:
+          </h3>
+
+          <div class="drafting-members-grid">
+            <div class="member-item">
+              <span class="member-num">1</span>
+              <div>Alladi Krishnaswami Ayyar (अल्लादी कृष्णास्वामी अय्यर)</div>
+            </div>
+            <div class="member-item">
+              <span class="member-num">2</span>
+              <div>N. Gopalaswami Ayyangar (एन. गोपालस्वामी अय्यंगार)</div>
+            </div>
+            <div class="member-item">
+              <span class="member-num">3</span>
+              <div>Muhammad Saddullah (सैयद मोहम्मद सादुल्ला)</div>
+            </div>
+            <div class="member-item">
+              <span class="member-num">4</span>
+              <div>
+                B. L. Mitter <em>(replaced by N. Madhav Rau)</em><br>
+                <span class="lang-hi" style="font-size: 0.85em; color: var(--hindi-subtext);">बी.एल. मित्तर (एन. माधव राव द्वारा प्रतिस्थापित)</span>
+              </div>
+            </div>
+            <div class="member-item">
+              <span class="member-num">5</span>
+              <div>
+                D. P. Khaitan <em>(replaced by T. T. Krishnamachari)</em><br>
+                <span class="lang-hi" style="font-size: 0.85em; color: var(--hindi-subtext);">डी.पी. खेतान (टी.टी. कृष्णामाचारी द्वारा प्रतिस्थापित)</span>
+              </div>
+            </div>
+            <div class="member-item">
+              <span class="member-num">6</span>
+              <div>K. M. Munshi (के.एम. मुंशी)</div>
+            </div>
+          </div>
+
+          <!-- Draft of Constitutional Assembly -->
+          <div style="margin-top: 2rem; background: var(--bg-card-secondary); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <h3 style="font-family: var(--font-family-display); font-size: 1.1rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;">
+              Draft of Costitutional Assembly & Readings (प्रारूप व वाचन)
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 1.25rem;">
+              <div class="study-bullet-list">
+                
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>21 Feb 1948:</strong> First draft was published. It took 8 months for the people of India to discuss.</span>
+                    <span class="lang-hi"><strong>21 फरवरी 1948:</strong> प्रथम प्रारूप प्रकाशित हुआ (चर्चा हेतु 8 माह दिए गए)।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>4 November 1948:</strong> B. R. Ambedkar introduced the final draft before Constituent Assembly.</span>
+                    <span class="lang-hi"><strong>4 नवंबर 1948:</strong> डॉ. अंबेडकर ने संविधान सभा में अंतिम प्रारूप पेश किया।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>1st reading:</strong> 5 days (4th Nov 1948 - 9th Nov 1948).</span>
+                    <span class="lang-hi"><strong>प्रथम वाचन:</strong> 5 दिन (4 नवंबर 1948 - 9 नवंबर 1948)</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>2nd reading:</strong> 10 months and 3 days (15 Nov 1948 - 17 Oct 1949)</span>
+                    <span class="lang-hi"><strong>द्वितीय वाचन:</strong> 10 महीने 3 दिन (15 नवंबर 1948 - 17 अक्टूबर 1949)</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>3rd reading:</strong> Completed on 26 Nov 1949.</span>
+                    <span class="lang-hi"><strong>तृतीय वाचन:</strong> 26 नवंबर 1949 को समाप्त हुआ।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet" style="font-weight: 700; color: var(--primary);">
+                  <div class="bilingual-block">
+                    <span class="lang-en">211 members were present on the 1st day of the constituent assembly.</span>
+                    <span class="lang-hi">संविधान सभा के पहले दिन कुल 211 सदस्य उपस्थित थे।</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="callout-box" style="border-left-color: var(--accent-emerald); background: var(--bg-card); margin: 0; font-size: 0.85rem;">
+                <strong style="color: var(--accent-emerald);">Ambedkar's Election (अंबेडकर का निर्वाचन):</strong>
+                <div class="bilingual-block" style="margin-top: 0.35rem;">
+                  <span class="lang-en">B.R. Ambedkar was elected to the Consituent Assembly from Bengal in July 1946 (before Partition) but after Partition he was elected from Bombay Presidency.</span>
+                  <span class="lang-hi">डॉ. बी.आर. अंबेडकर जुलाई 1946 (विभाजन पूर्व) में बंगाल से चुने गए थे, परंतु विभाजन के बाद वे बॉम्बे प्रेसीडेंसी से निर्वाचित हुए।</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: IMPORTANT SESSIONS & MILESTONES (PAGE 8)
+           ==================================================================== -->
+      <section class="study-card" id="sec-sessions">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📅 Important Sessions & Adoption / महत्वपूर्ण सत्र एवं अंगीकरण</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 3fr 2fr; gap: 1.25rem;">
+            
+            <div>
+              <div class="study-bullet-list">
+                
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><span class="key-term">Total sessions held:</span> 11 sessions for 165 days.</span>
+                    <span class="lang-hi"><span class="key-term">कुल सत्र:</span> 11 सत्र (165 दिनों तक चले)।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><span class="key-term">Total time taken:</span> 2 years 11 months 18 days.</span>
+                    <span class="lang-hi"><span class="key-term">कुल समय:</span> 2 वर्ष, 11 माह, 18 दिन।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><span class="key-term">Budget:</span> 64 lakhs (to frame the Constitution).</span>
+                    <span class="lang-hi"><span class="key-term">कुल खर्च / बजट:</span> लगभग ₹64 लाख।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>1st Session:</strong> 9-23rd December 1946 (9-23 दिसंबर 1946)</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>10th Session:</strong> 6-17th October 1949 (6-17 अक्टूबर 1949)</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>11th Session:</strong> 14-26th November 1949 (also the last session / अंतिम सत्र)</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>Final Draft:</strong> Presented by Dr. B. R. Ambedkar before the public on 4th November 1948.</span>
+                    <span class="lang-hi">अंतिम प्रारूप 4 नवंबर 1948 को जनता के समक्ष रखा गया।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>26th November 1949:</strong> Constitution was adopted (this day is also celebrated as the <em>"Constitution Day"</em>)</span>
+                    <span class="lang-hi"><strong>26 नवंबर 1949:</strong> संविधान को अंगीकृत / स्वीकार (Adopted) किया गया (यह दिन 'संविधान दिवस' के रूप में मनाया जाता है)।</span>
+                  </div>
+                </div>
+
+                <div class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>26th January 1950:</strong> Constitution was enforced / commenced on this day, Hence, this day is celebrated as <strong>THE REPUBLIC DAY OF INDIA</strong>.</span>
+                    <span class="lang-hi"><strong>26 जनवरी 1950:</strong> संविधान पूर्णतः लागू हुआ, इसलिए यह दिन भारत के <strong>गणतंत्र दिवस</strong> के रूप में मनाया जाता है।</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div>
+              <div class="callout-box" style="border-left-color: var(--accent-gold); background: rgba(245, 158, 11, 0.05); margin-top: 0;">
+                <strong style="color: var(--accent-gold); font-size: 0.95rem;">Why 26th January? (26 जनवरी ही क्यों?)</strong>
+                <div class="bilingual-block" style="margin-top: 0.35rem;">
+                  <span class="lang-en" style="font-size: 0.85rem;">The reason for chosing this date is because on the same day in 1930 Purna Swaraj day was celebrated following the Lahore session (1929).</span>
+                  <span class="lang-hi" style="font-size: 0.85rem;">क्योंकि 1929 के लाहौर अधिवेशन के निर्णय अनुसार 26 जनवरी 1930 को प्रथम 'पूर्ण स्वराज दिवस' मनाया गया था।</span>
+                </div>
+              </div>
+
+              <div class="callout-box" style="border-left-color: var(--primary); background: var(--bg-card-secondary); margin-top: 0.85rem;">
+                <strong style="color: var(--primary); font-size: 0.95rem;">Original Constitution (मूल संविधान):</strong>
+                <div class="bilingual-block" style="margin-top: 0.35rem;">
+                  <span class="lang-en" style="font-size: 0.85rem;">Originally, our Constitution consisted of <strong>395 Articles, 8 Schedules, 22 Parts and a Preamble</strong>.</span>
+                  <span class="lang-hi" style="font-size: 0.85rem;">मूल संविधान में <strong>395 अनुच्छेद, 8 अनुसूचियां, 22 भाग और 1 प्रस्तावना</strong> शामिल थे।</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Provisions Imposed on 26 Nov 1949 -->
+          <div style="margin-top: 1.5rem; background: var(--bg-card-secondary); padding: 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <h4 style="font-family: var(--font-family-display); font-size: 0.95rem; font-weight: 800; color: var(--accent-crimson); margin-bottom: 0.5rem;">
+              ⚡ Some provisions were imposed on 26th November 1949 (तत्काल लागू प्रावधान):
+            </h4>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9rem; font-weight: 600;">
+              <span>• Citizenship (Article 5-9) / नागरिकता</span>
+              <span>• Elections (Article 324-329) / चुनाव</span>
+              <span>• Provisional Parliament / अस्थायी संसद</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: FUNCTIONS & WORKING OF CA (PAGE 8)
+           ==================================================================== -->
+      <section class="study-card" id="sec-functions">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚙️ Functions & Working / संविधान सभा के दोहरे कार्य व कार्यप्रणाली</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="callout-box" style="border-left-color: var(--primary); margin: 0;">
+              <strong style="font-size: 1rem; color: var(--primary);">1️⃣ Law-Making Body / विधायिका रूप में</strong>
+              <div class="bilingual-block" style="margin-top: 0.35rem;">
+                <span class="lang-en">Chaired by: <strong>G. V. Mavalankar</strong> (first speaker of Lok Sabha)</span>
+                <span class="lang-hi">अध्यक्षता: <strong>जी. वी. मावलंकर</strong> (लोकसभा के प्रथम अध्यक्ष)</span>
+              </div>
+            </div>
+            <div class="callout-box" style="border-left-color: var(--success); margin: 0;">
+              <strong style="font-size: 1rem; color: var(--success);">2️⃣ Constitution Making Body / संविधान निर्माता रूप में</strong>
+              <div class="bilingual-block" style="margin-top: 0.35rem;">
+                <span class="lang-en">Chaired by: <strong>Dr. Rajendra Prasad</strong></span>
+                <span class="lang-hi">अध्यक्षता: <strong>डॉ. राजेंद्र प्रसाद</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem;">
+            Key Milestones of the Constituent Assembly (संविधान सभा द्वारा किए गए अन्य कार्य):
+          </h3>
+
+          <div class="study-bullet-list">
+            
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">It functioned as the <strong>'First Parliament of India'</strong></span>
+                <span class="lang-hi">इसने भारत की <strong>'प्रथम संसद'</strong> के रूप में भी कार्य किया।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">It adopted <strong>National Flag</strong> on <strong>22 July, 1947</strong></span>
+                <span class="lang-hi"><strong>22 जुलाई 1947</strong> को <strong>राष्ट्रीय ध्वज</strong> को अपनाया।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">It adopted <strong>National Anthem</strong> (<em>"Jana Gana Mana"</em> by Rabindranath Tagore) and <strong>National Song</strong> (<em>"Vande Matram"</em> ➔ by Bankim Chandra Chatterjee) on <strong>24 January, 1950</strong>.</span>
+                <span class="lang-hi"><strong>24 जनवरी 1950</strong> को <strong>राष्ट्रगान</strong> (जन गण मन) और <strong>राष्ट्रगीत</strong> (वंदे मातरम) को अपनाया गया।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">It ratified India's membership of the Commonwealth in <strong>May 1949</strong>.</span>
+                <span class="lang-hi"><strong>मई 1949</strong> में राष्ट्रमंडल (Commonwealth) में भारत की सदस्यता का सत्यापन किया।</span>
+              </div>
+            </div>
+
+            <div class="study-bullet">
+              <div class="bilingual-block">
+                <span class="lang-en">Elected <strong>Dr. Rajendra Prasad</strong> as the 1st President of India on <strong>26 Jan 1950</strong>.</span>
+                <span class="lang-hi"><strong>26 जनवरी 1950</strong> को <strong>डॉ. राजेंद्र प्रसाद</strong> को भारत के प्रथम राष्ट्रपति के रूप में चुना।</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Working of CA -->
+          <div style="margin-top: 1.5rem; background: var(--bg-card-secondary); padding: 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
+            <h3 style="font-family: var(--font-family-display); font-size: 1rem; font-weight: 800; color: var(--primary); margin-bottom: 0.6rem;">
+              🏛️ Working of Constituent Assembly / प्रारंभिक बैठकें व पदाधिकारी
+            </h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; font-size: 0.9rem;">
+              <p>• <strong>9 Dec 1946:</strong> 1st meeting (211 members / प्रथम बैठक)</p>
+              <p>• <strong>Temporary President:</strong> Dr. Sachchidanand Sinha (अस्थायी अध्यक्ष)</p>
+              <p>• <strong>Permanent President:</strong> Dr. Rajendra Prasad (स्थायी अध्यक्ष)</p>
+              <p>• <strong>Vice President:</strong> H.C.Mukherjee (उपाध्यक्ष)</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 11: SIGNIFICANT FACTS & CALLIGRAPHERS (PAGE 9)
+           ==================================================================== -->
+      <section class="study-card" id="sec-facts">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🐘 Some more Significant facts / अन्य महत्वपूर्ण तथ्य</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="table-responsive">
+            <table class="study-table">
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Legal / Constitutional advisor</strong></span>
+                      <span class="lang-hi">संवैधानिक सलाहकार</span>
+                    </div>
+                  </td>
+                  <td><strong>B. N. Rau (बी. एन. राव)</strong></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Chief Draftsman</strong></span>
+                      <span class="lang-hi">मुख्य प्रारूपकार</span>
+                    </div>
+                  </td>
+                  <td><strong>S. N. Mukherjee (एस. एन. मुखर्जी)</strong></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>No. of members who signed constitution</strong></span>
+                      <span class="lang-hi">संविधान पर हस्ताक्षर करने वाले सदस्य</span>
+                    </div>
+                  </td>
+                  <td><strong>284</strong> (including 15 female members / 15 महिला सदस्यों सहित)</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Secretary of Constituent Assembly</strong></span>
+                      <span class="lang-hi">संविधान सभा के सचिव</span>
+                    </div>
+                  </td>
+                  <td><strong>H.V. Iyengar (एच. वी. अय्यंगार)</strong></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Constitutional Symbol</strong></span>
+                      <span class="lang-hi">संवैधानिक प्रतीक / मुहर</span>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en">India's constitution is the largest written constitution, its symbol is an <strong>Elephant</strong>.</span>
+                      <span class="lang-hi">भारत का संविधान विश्व का सबसे बड़ा लिखित संविधान है, इसका प्रतीक <strong>हाथी (Elephant)</strong> है।</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Language of the Constitution</strong></span>
+                      <span class="lang-hi">संविधान की मूल भाषा</span>
+                    </div>
+                  </td>
+                  <td><strong>English (अंग्रेजी)</strong></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="bilingual-block">
+                      <span class="lang-en"><strong>Constitution Calligraphers (सुलेखक)</strong></span>
+                      <span class="lang-hi">हाथ से लिखने वाले कैलीग्राफर</span>
+                    </div>
+                  </td>
+                  <td>
+                    • <strong>English (अंग्रेजी):</strong> Prem Behari Narain Raizada (प्रेम बिहारी नारायण रायजादा)<br>
+                    • <strong>Hindi (हिंदी):</strong> Vasant Krishna Vaidya (वसंत कृष्ण वैद्य)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 12: IMPORTANT FEMALE MEMBERS (PAGE 9)
+           ==================================================================== -->
+      <section class="study-card" id="sec-females">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👩 Important Female members / संविधान सभा की प्रमुख महिला सदस्य</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="female-leaders-grid">
+            
+            <div class="female-leader-card">
+              <div class="female-name">Rajkumari Amrit Kaur (राजकुमारी अमृत कौर)</div>
+              <div class="female-role">
+                <div class="bilingual-block">
+                  <span class="lang-en">1st Health Minister</span>
+                  <span class="lang-hi">भारत की प्रथम स्वास्थ्य मंत्री</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="female-leader-card">
+              <div class="female-name">Sucheta Kriplani (सुचेता कृपलानी)</div>
+              <div class="female-role">
+                <div class="bilingual-block">
+                  <span class="lang-en">1st female Chief Minister of Uttar Pradesh</span>
+                  <span class="lang-hi">उत्तर प्रदेश (व भारत) की प्रथम महिला मुख्यमंत्री</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="female-leader-card">
+              <div class="female-name">Sarojini Naidu (सरोजिनी नायडू)</div>
+              <div class="female-role">
+                <div class="bilingual-block">
+                  <span class="lang-en">1st Governor of Uttar Pradesh</span>
+                  <span class="lang-hi">उत्तर प्रदेश (व भारत) की प्रथम महिला राज्यपाल</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Making of Constitution</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>

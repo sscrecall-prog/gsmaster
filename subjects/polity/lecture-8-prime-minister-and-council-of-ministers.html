@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Minister & Council of Ministers (प्रधानमंत्री एवं मंत्रिपरिषद) | GS Master Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 PRIME MINISTER & CoM (भाग 5)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search Articles 74-78, Attorney General (Art 76), 91st CA 15%, Collective Responsibility in EN/हिंदी..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-pm-overview" class="topic-link active"><span class="topic-icon">📜</span> 1. Prime Minister Overview & Chairmanships</a></li>
+          <li><a href="#sec-art74" class="topic-link"><span class="topic-icon">🏛️</span> 2. Article 74 (Aid & Advice & "Cabinet" in 352)</a></li>
+          <li><a href="#sec-art75" class="topic-link"><span class="topic-icon">⚖️</span> 3. Article 75 (Appointment, 91st CA & 15% Cap)</a></li>
+          <li><a href="#sec-types-ministers" class="topic-link"><span class="topic-icon">👥</span> 4. 3 Categories of Ministers</a></li>
+          <li><a href="#sec-art76-ag" class="topic-link"><span class="topic-icon">🛡️</span> 5. Article 76: Attorney General & Advocate General</a></li>
+          <li><a href="#sec-dissolution-rs-pm" class="topic-link"><span class="topic-icon">⚡</span> 6. Dissolution of CoM & Rajya Sabha PMs</a></li>
+          <li><a href="#sec-art77-78" class="topic-link"><span class="topic-icon">📋</span> 7. Articles 77 & 78 (Conduct & Duties of PM)</a></li>
+          <li><a href="#sec-pm-powers-quotes" class="topic-link"><span class="topic-icon">💬</span> 8. Powers, Functions & Scholar Quotes</a></li>
+          <li><a href="#sec-fall-governments" class="topic-link"><span class="topic-icon">📉</span> 9. Fall of Governments & Coalition History</a></li>
+          <li><a href="#sec-pm-chronology" class="topic-link"><span class="topic-icon">📑</span> 10. Chronological List of Prime Ministers (1947–Present)</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Polity Lecture-8 / विषय:</div>
+        <h1 class="hero-title">Prime Minister & Council of Ministers</h1>
+        <div class="hero-title-hindi">भाग-5: प्रधानमंत्री, मंत्रिपरिषद एवं महान्यायवादी (अनुच्छेद 74 से 78)</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Part V: Articles 74 to 78</span>
+          <span class="hero-meta-pill">⚖️ Article 76: Attorney General of India</span>
+          <span class="hero-meta-pill">📊 91st Amendment (15% Strength Cap)</span>
+          <span class="hero-meta-pill">📑 Complete PM Chronology (1947–Present)</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: PRIME MINISTER OVERVIEW & CHAIRPERSONSHIPS
+           ==================================================================== -->
+      <section class="study-card" id="sec-pm-overview">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📜 1. Prime Minister & Council of Ministers (Articles 74–78)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: var(--primary); background: var(--bg-card-secondary); margin-top: 0;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+              <div>
+                <strong style="color: var(--primary); font-size: 1.05rem;">Constitutional Position:</strong>
+                <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem; margin-top: 0.35rem;">
+                  <li class="study-bullet">The Prime Minister is the <strong>Head of the Union Government</strong> and leader of the Council of Ministers.</li>
+                  <li class="study-bullet">The PM is the <strong>Real / <em>De facto</em> Head of the Government</strong> (President is the <em>De jure</em> / Nominal Head).</li>
+                </ul>
+              </div>
+              <div class="lang-hi" style="font-size: 0.88rem; border-left: 1px solid var(--border-color); padding-left: 1rem;">
+                <strong style="color: var(--primary);">संवैधानिक स्थिति:</strong><br>
+                संसदीय शासन प्रणाली में राष्ट्रपति राज्य/देश का संवैधानिक (नाममात्र का) प्रमुख होता है, जबकि <strong>प्रधानमंत्री सरकार का वास्तविक (De facto) प्रमुख</strong> होता है।
+              </div>
+            </div>
+          </div>
+
+          <!-- PM Chairmanships Grid -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.5rem 0 0.75rem;">
+            Key Bodies Chaired by the Prime Minister of India:
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">1. NITI Aayog</div>
+              <p style="font-size: 0.85rem;">Ex-officio Chairman of National Institution for Transforming India (Replaced Planning Commission in 2015).</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">2. Inter-State Council</div>
+              <p style="font-size: 0.85rem;">Ex-officio Chairman of Inter-State Council under <strong>Article 263</strong> to coordinate Centre-State relations.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">3. NDMA</div>
+              <p style="font-size: 0.85rem;">Chairman of <strong>National Disaster Management Authority</strong> for apex disaster policy & response.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">4. National Integration Council</div>
+              <p style="font-size: 0.85rem;">Heads National Integration Council to address communalism, regionalism and casteism.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">5. National Water Resources</div>
+              <p style="font-size: 0.85rem;">Chairman of National Water Resources Council for integrated national water policy.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #0284c7;">6. Appointments Committee</div>
+              <p style="font-size: 0.85rem;">Chairman of Appointments Committee of Cabinet (ACC) for senior civil & military postings.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: ARTICLE 74 (AID & ADVICE & "CABINET" TERM)
+           ==================================================================== -->
+      <section class="study-card" id="sec-art74">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ 2. Article 74: Council of Ministers to Aid & Advise President</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 74(1) : Aid and Advice</div>
+              <p style="font-size: 0.88rem; line-height: 1.6;">
+                There shall be a <strong>Council of Ministers with the Prime Minister at the head</strong> to aid and advise the President who shall act in accordance with such advice.
+              </p>
+              <div style="background: var(--bg-card); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-top: 0.5rem; font-size: 0.85rem;">
+                • <strong>42nd CA (1976):</strong> Made ministerial advice <strong>binding on the President</strong>.<br>
+                • <strong>44th CA (1978):</strong> President may return advice <strong>once for reconsideration</strong>; but after reconsideration, the President must accept the advice.
+              </div>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 74(2) : Bar on Court Inquiry</div>
+              <p style="font-size: 0.88rem; line-height: 1.6;">
+                The question whether any, and if so what, advice was tendered by Ministers to the President <strong>shall NOT be inquired into by any court</strong> (Confidentiality of advice).
+              </p>
+              <div style="background: var(--bg-card); padding: 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-top: 0.5rem; font-size: 0.85rem;">
+                📌 <strong>Origin of the Term "Cabinet":</strong><br>
+                The word "Cabinet" was not in original Constitution. <strong>44th Amendment Act, 1978</strong> introduced it formally into <strong>Article 352(3)</strong> (National Emergency on written recommendation of the Cabinet).
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: ARTICLE 75 (APPOINTMENTS, 91ST CA & 15% CAP)
+           ==================================================================== -->
+      <section class="study-card" id="sec-art75">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 3. Article 75: Appointment, Collective Responsibility & 91st CA</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 75(1) : Appointment</div>
+              <p style="font-size: 0.85rem;"><strong>Prime Minister is appointed by the President</strong>, and other Ministers are appointed by President on the <strong>advice of PM</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 75(2) : Individual Responsibility</div>
+              <p style="font-size: 0.85rem;">Ministers hold office <strong>during the pleasure of the President</strong> (PM can ask any minister to resign or recommend dismissal).</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0; border: 2px solid #2563eb; background: #eff6ff;">
+              <div class="offer-plan-title" style="color: #1e40af;">Article 75(3) : Collective Responsibility ⭐</div>
+              <p style="font-size: 0.88rem; color: #1e40af;">
+                The Council of Ministers is <strong>collectively responsible to the House of the People (Lok Sabha)</strong>. If a No-Confidence Motion is passed in Lok Sabha, all ministers must resign (They sink or swim together).
+              </p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 75(4) : Oath of Office & Secrecy</div>
+              <p style="font-size: 0.85rem;">Administered by the <strong>President</strong> in the forms set out in the <strong>Third Schedule</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">Article 75(5) : Six Months Rule</div>
+              <p style="font-size: 0.85rem;">A Minister who is not a member of either House for <strong>6 consecutive months</strong> ceases to be a Minister at the end of that period.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 75(6) : Salaries & Allowances</div>
+              <p style="font-size: 0.85rem;">Determined by <strong>Parliament</strong> by law; until then, specified in the <strong>Second Schedule</strong>.</p>
+            </div>
+
+          </div>
+
+          <!-- 91st Amendment Callout -->
+          <div class="callout-box" style="border-left-color: #059669; background: #ecfdf5; color: #065f46; margin-top: 1.25rem;">
+            <strong style="font-size: 1.05rem; color: #065f46;">⭐ 91st Constitutional Amendment Act, 2003:</strong>
+            <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem; margin-top: 0.4rem; color: #065f46;">
+              <li class="study-bullet"><strong>Article 75(1A):</strong> The total number of Ministers, including the Prime Minister, in the Council of Ministers <strong>shall NOT exceed 15% of the total strength of the Lok Sabha</strong>.</li>
+              <li class="study-bullet"><strong>Article 75(1B):</strong> A member disqualified on grounds of defection (10th Schedule) <strong>shall also be disqualified from being appointed as a Minister</strong>.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: 3 CATEGORIES OF MINISTERS
+           ==================================================================== -->
+      <section class="study-card" id="sec-types-ministers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👥 4. Three Categories of Ministers</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+            
+            <div class="gov-card communist">
+              <div class="gov-card-header">1. Cabinet Ministers</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">
+                  Hold crucial portfolios like Defence, Home, Finance, External Affairs, Education.
+                </p>
+                <div style="font-size: 0.85rem; color: #1e40af; font-weight: 700;">
+                  Attend and participate in all Cabinet meetings; determine core national policy.
+                </div>
+              </div>
+            </div>
+
+            <div class="gov-card monarchic">
+              <div class="gov-card-header">2. Ministers of State (MoS)</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">
+                  Can be given Independent Charge of smaller ministries or assist Cabinet Ministers.
+                </p>
+                <div style="font-size: 0.85rem; color: #92400e; font-weight: 700;">
+                  Do not participate in Cabinet meetings unless specially invited.
+                </div>
+              </div>
+            </div>
+
+            <div class="gov-card totalitarian">
+              <div class="gov-card-header">3. Deputy Ministers</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">
+                  Attached to Cabinet Ministers or Ministers of State to assist in administrative duties.
+                </p>
+                <div style="font-size: 0.85rem; color: #991b1b; font-weight: 700;">
+                  No independent charge; lowest tier in the ministerial hierarchy.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: ARTICLE 76 (ATTORNEY GENERAL & ADVOCATE GENERAL)
+           ==================================================================== -->
+      <section class="study-card" id="sec-art76-ag">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🛡️ 5. Article 76: Attorney General of India & Advocate General (Art 165)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <!-- Attorney General -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">
+                Article 76 : Attorney General of India (महान्यायवादी)
+              </div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Highest Law Officer of the Country</strong> (देश का सर्वोच्च विधिक अधिकारी).</li>
+                <li class="study-bullet">Appointed by the <strong>President</strong>; must be <strong>qualified to be a Judge of the Supreme Court</strong>.</li>
+                <li class="study-bullet">Holds office <strong>during the pleasure of the President</strong>.</li>
+                <li class="study-bullet"><strong>Article 76(3):</strong> Has the <strong>Right of Audience in all courts</strong> in India.</li>
+                <li class="study-bullet"><strong>Article 88:</strong> Right to speak and participate in Parliament proceedings, <strong>WITHOUT the right to vote</strong>.</li>
+                <li class="study-bullet">Not a government servant; not debarred from private practice.</li>
+              </ul>
+            </div>
+
+            <!-- Advocate General -->
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">
+                Article 165 : Advocate General of State (महाधिवक्ता)
+              </div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Highest Law Officer of the State</strong> (राज्य का सर्वोच्च कानून अधिकारी).</li>
+                <li class="study-bullet">Appointed by the <strong>Governor</strong>; must be <strong>qualified to be a Judge of a High Court</strong>.</li>
+                <li class="study-bullet">Holds office <strong>during the pleasure of the Governor</strong>.</li>
+                <li class="study-bullet"><strong>Article 177:</strong> Right to speak in State Legislature without right to vote.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Key Law Officers Facts -->
+          <div class="callout-box" style="border-left-color: #7c3aed; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.88rem;">
+              <div>
+                <strong>1st Attorney General:</strong><br>
+                <strong>M. C. Setalvad</strong> (Longest serving, 1950–1963)
+              </div>
+              <div>
+                <strong>Current Attorney General:</strong><br>
+                <strong>R. Venkataramani</strong> (16th AG)
+              </div>
+              <div>
+                <strong>Solicitor General of India:</strong><br>
+                <strong>Tushar Mehta</strong> (Statutory post, assists AG)
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: DISSOLUTION OF COM & RAJYA SABHA PMS
+           ==================================================================== -->
+      <section class="study-card" id="sec-dissolution-rs-pm">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚡ 6. Dissolution of CoM & Rajya Sabha Members who became PM</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #dc2626; background: rgba(220, 38, 38, 0.05);">
+              <strong style="color: #dc2626; font-size: 1rem;">Dissolution Rules of Council of Ministers:</strong>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem; margin-top: 0.35rem;">
+                <li class="study-bullet">If an individual Minister resigns or dies ➔ only a <strong>vacancy is created</strong>.</li>
+                <li class="study-bullet">If the <strong>Prime Minister dies or resigns</strong> ➔ the <strong>entire Council of Ministers is automatically dissolved</strong>.</li>
+                <li class="study-bullet"><em>First PM to resign:</em> <strong>Morarji Desai (1979)</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #2563eb; background: var(--bg-card-secondary);">
+              <strong style="color: #2563eb; font-size: 1rem;">Rajya Sabha Members who Became PM:</strong>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; margin-top: 0.35rem;">
+                <p>1. <strong>Indira Gandhi</strong> (1966)</p>
+                <p>2. <strong>H. D. Deve Gowda</strong> (1996)</p>
+                <p>3. <strong>I. K. Gujral</strong> (1997)</p>
+                <p>4. <strong>Dr. Manmohan Singh</strong> (2004, 2009)</p>
+              </div>
+              <div class="lang-hi" style="font-size: 0.82rem; margin-top: 0.35rem;">
+                <em>(एच.डी. देवेगौड़ा बिना केंद्रीय मंत्री बने सीधे प्रधानमंत्री बनने वाले नेता थे।)</em>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: ARTICLES 77 & 78 (CONDUCT & DUTIES OF PM)
+           ==================================================================== -->
+      <section class="study-card" id="sec-art77-78">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📋 7. Articles 77 & 78: Conduct of Business & Duties of Prime Minister</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 77 : Conduct of Business of GoI</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>77(1):</strong> All executive actions of Government of India are taken in the <strong>name of the President</strong>.</li>
+                <li class="study-bullet"><strong>77(2):</strong> Orders and instruments made in President's name authenticated under rules.</li>
+                <li class="study-bullet"><strong>77(3):</strong> President makes rules for convenient transaction of business (*Allocation of Business Rules*).</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 78 : Duties of the Prime Minister</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>78(a):</strong> Communicate to the President all decisions of the Council of Ministers.</li>
+                <li class="study-bullet"><strong>78(b):</strong> Furnish information relating to administration and legislation as President calls for.</li>
+                <li class="study-bullet"><strong>78(c):</strong> Submit for consideration of Council any matter decided by a Minister but not considered by the Council.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: POWERS, FUNCTIONS & SCHOLAR QUOTES
+           ==================================================================== -->
+      <section class="study-card" id="sec-pm-powers-quotes">
+        <div class="study-card-header">
+          <h2 class="study-card-title">💬 8. Powers and Functions of the PM & Eminent Quotes</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Core Powers and Functions of the PM</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">1. Recommends appointments and dismissal of Ministers to the President.</li>
+                <li class="study-bullet">2. Allocates and reshuffles portfolios among Ministers.</li>
+                <li class="study-bullet">3. Presides over meetings of the Cabinet/Council of Ministers.</li>
+                <li class="study-bullet">4. Advises President to summon, prorogue or dissolve the Lok Sabha.</li>
+                <li class="study-bullet">5. Principal spokesperson of the Union Government in Parliament.</li>
+                <li class="study-bullet">6. Resignation of PM brings about the collapse of the entire Ministry.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Scholar Quotes on the Post of PM</div>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.3rem;">
+                <div class="callout-box" style="margin:0; border-left-color: #2563eb;">
+                  <strong>Dr. B. R. Ambedkar:</strong><br>
+                  <em>"Collective responsibility can be achieved only through the instrumentality of the Prime Minister."</em>
+                </div>
+                <div class="callout-box" style="margin:0; border-left-color: #059669;">
+                  <strong>Pt. Jawaharlal Nehru:</strong><br>
+                  Described PM as <em>"The Linchpin of Government"</em> (सरकार की धुरी).
+                </div>
+                <div class="callout-box" style="margin:0; border-left-color: #d97706;">
+                  <strong>Lord Morley:</strong><br>
+                  <em>"Primus inter pares"</em> (First among equals).
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: FALL OF GOVERNMENTS & COALITION TIMELINE
+           ==================================================================== -->
+      <section class="study-card" id="sec-fall-governments">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📉 9. Historic Fall of Governments & Tenures</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Prime Minister</th>
+                  <th>Tenure</th>
+                  <th>Reason of Fall / Political Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1989</td><td><strong>V. P. Singh</strong></td><td>11 Months</td><td>BJP withdrew support</td></tr>
+                <tr><td>1990</td><td><strong>Chandra Shekhar</strong></td><td>7 Months</td><td>Congress withdrew support (Shortest full-term PM)</td></tr>
+                <tr><td>1996</td><td><strong>Atal Bihari Vajpayee</strong></td><td>13 Days</td><td>Shortest term (No majority in Lok Sabha)</td></tr>
+                <tr><td>1996</td><td><strong>H. D. Deve Gowda</strong></td><td>11 Months</td><td>Congress withdrew support</td></tr>
+                <tr><td>1997</td><td><strong>I. K. Gujral</strong></td><td>11 Months</td><td>Congress withdrew support</td></tr>
+                <tr><td>1998</td><td><strong>Atal Bihari Vajpayee</strong></td><td>13 Months</td><td>AIADMK withdrew support (lost by 1 vote)</td></tr>
+                <tr><td>1999–2004</td><td><strong>Atal Bihari Vajpayee</strong></td><td>5 Years</td><td>Full 5-year stability (1st non-Congress PM)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: CHRONOLOGY OF PRIME MINISTERS OF INDIA
+           ==================================================================== -->
+      <section class="study-card" id="sec-pm-chronology">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📑 10. Chronological List of Prime Ministers of India (1947–Present)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Prime Minister</th>
+                  <th>Tenure / Term</th>
+                  <th>Key Significance & Highlights</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><strong>Jawaharlal Nehru</strong></td><td>1947 – 1964</td><td>Longest serving PM (16 yrs, 286 days); died in office</td></tr>
+                <tr><td>—</td><td><em>Gulzarilal Nanda</em></td><td>1964 (13 days)</td><td>1st Acting Prime Minister</td></tr>
+                <tr><td>2</td><td><strong>Lal Bahadur Shastri</strong></td><td>1964 – 1966</td><td>Jai Jawan Jai Kisan; died in Tashkent 1966</td></tr>
+                <tr><td>—</td><td><em>Gulzarilal Nanda</em></td><td>1966 (13 days)</td><td>Acting PM for 2nd time</td></tr>
+                <tr><td>3</td><td><strong>Indira Gandhi</strong></td><td>1966 – 1977, 1980 – 1984</td><td>1st Woman PM; Bank nationalisation 1969; 1975 Emergency</td></tr>
+                <tr><td>4</td><td><strong>Morarji Desai</strong></td><td>1977 – 1979</td><td>1st Non-Congress PM; Oldest PM (81 yrs); 1st to resign</td></tr>
+                <tr><td>5</td><td><strong>Charan Singh</strong></td><td>1979 – 1980</td><td>Never faced Parliament</td></tr>
+                <tr><td>6</td><td><strong>Rajiv Gandhi</strong></td><td>1984 – 1989</td><td>Youngest PM (40 yrs); Telecom & IT revolution</td></tr>
+                <tr><td>7</td><td><strong>V. P. Singh</strong></td><td>1989 – 1990</td><td>Implemented Mandal Commission 27% OBC quota</td></tr>
+                <tr><td>8</td><td><strong>Chandra Shekhar</strong></td><td>1990 – 1991</td><td>Young Turk leader (7 months)</td></tr>
+                <tr><td>9</td><td><strong>P. V. Narasimha Rao</strong></td><td>1991 – 1996</td><td>LPG Economic Reforms 1991 (1st South Indian PM)</td></tr>
+                <tr><td>10</td><td><strong>Atal Bihari Vajpayee</strong></td><td>1996, 1998–2004</td><td>Pokhran-II (1998), Kargil War, 1st complete non-Congress 5-yr term</td></tr>
+                <tr><td>11</td><td><strong>H. D. Deve Gowda</strong></td><td>1996 – 1997</td><td>Rajya Sabha member, from Karnataka</td></tr>
+                <tr><td>12</td><td><strong>Inder Kumar Gujral</strong></td><td>1997 – 1998</td><td>Formulated the Gujral Doctrine in Foreign Policy</td></tr>
+                <tr><td>13</td><td><strong>Dr. Manmohan Singh</strong></td><td>2004 – 2014</td><td>1st Sikh PM; Served 2 full terms (10 years)</td></tr>
+                <tr><td>14</td><td><strong>Narendra Modi</strong></td><td>2014 – Present</td><td>1st PM born in Independent India; 3rd consecutive term</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Lecture 8: Prime Minister & CoM</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>

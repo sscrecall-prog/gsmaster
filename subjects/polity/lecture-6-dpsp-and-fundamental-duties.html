@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DPSP & Fundamental Duties (नीति निदेशक तत्व एवं मूल कर्तव्य) | GS Master Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 DPSP & FUNDAMENTAL DUTIES</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search Articles 36-51, 51A(a-k), Swaran Singh, Minerva Mills, UCC, Tricks in EN/हिंदी..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-dpsp-overview" class="topic-link active"><span class="topic-icon">📜</span> 1. Salient Features & Scholar Comments</a></li>
+          <li><a href="#sec-articles-36-39" class="topic-link"><span class="topic-icon">🏛️</span> 2. Articles 36 to 39 (State, Welfare & Principles)</a></li>
+          <li><a href="#sec-articles-39a-49" class="topic-link"><span class="topic-icon">⚖️</span> 3. Articles 39A to 49 (UCC, Panchayats, Environment)</a></li>
+          <li><a href="#sec-articles-50-51" class="topic-link"><span class="topic-icon">🕊️</span> 4. Articles 50 & 51 (Judiciary & International Peace)</a></li>
+          <li><a href="#sec-dpsp-classification" class="topic-link"><span class="topic-icon">🗂️</span> 5. 3-Fold Classification of DPSPs</a></li>
+          <li><a href="#sec-dpsp-amendments" class="topic-link"><span class="topic-icon">⚡</span> 6. DPSPs Added Through Amendments</a></li>
+          <li><a href="#sec-fr-vs-dpsp" class="topic-link"><span class="topic-icon">⚖️</span> 7. FRs vs DPSPs Cases & Comparison Table</a></li>
+          <li><a href="#sec-part4a-duties" class="topic-link"><span class="topic-icon">🛡️</span> 8. Part IVA: Fundamental Duties [Article 51A]</a></li>
+          <li><a href="#sec-11-duties" class="topic-link"><span class="topic-icon">📋</span> 9. The 11 Fundamental Duties (a to k)</a></li>
+          <li><a href="#sec-verma-committee" class="topic-link"><span class="topic-icon">⚖️</span> 10. Justice Verma Committee & Enforcing Laws</a></li>
+          <li><a href="#sec-fd-tricks" class="topic-link"><span class="topic-icon">💡</span> 11. Tricks to Learn All 11 Fundamental Duties</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Polity Lecture-6 / विषय:</div>
+        <h1 class="hero-title">DPSP & Fundamental Duties</h1>
+        <div class="hero-title-hindi">राज्य के नीति निदेशक तत्व (भाग 4) एवं मूल कर्तव्य (भाग 4A)</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Part IV: Articles 36 to 51</span>
+          <span class="hero-meta-pill">🛡️ Part IVA: Article 51A (11 Duties)</span>
+          <span class="hero-meta-pill">⚖️ Welfare State & Socio-Economic Democracy</span>
+          <span class="hero-meta-pill">💡 Memory Tricks & Verma Committee</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: SALIENT FEATURES OF DPSP & SCHOLAR COMMENTS
+           ==================================================================== -->
+      <section class="study-card" id="sec-dpsp-overview">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📜 1. Salient Features of DPSP & Scholar Comments</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <!-- Salient Features -->
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #2563eb;">
+                Salient Features of DPSP (नीति निदेशक तत्व)
+              </div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.45rem;">
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>DPSP are non-justiciable</strong>, means that they are not legally enforceable by courts.</span>
+                    <span class="lang-hi">DPSP गैर-न्यायोचित (अवादयोग्य) हैं, अर्थात न्यायालय द्वारा इन्हें लागू नहीं कराया जा सकता।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>The concept is borrowed from the Irish Constitution (Ireland).</strong></span>
+                    <span class="lang-hi">यह विचार आयरलैंड के संविधान (1937) से लिया गया है।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">Their objective is to help establish <strong>Social and Economic Democracy</strong>.</span>
+                    <span class="lang-hi">इनका मुख्य उद्देश्य देश में <strong>सामाजिक एवं आर्थिक लोकतंत्र</strong> की स्थापना करना है।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">DPSPs reflect the vision of a <strong>Welfare State</strong> as outlined in the Constitution.</span>
+                    <span class="lang-hi">ये संविधान में उल्लिखित <strong>कल्याणकारी राज्य (Welfare State)</strong> की परिकल्पना को साकार करते हैं।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en">They serve as a measure to assess laws based on their alignment with constitutional ideals.</span>
+                    <span class="lang-hi">ये कानूनों की संवैधानिक आदर्शों के साथ अनुकूलता की जांच करने का पैमाना हैं।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>Novel Features / Resemble the Instrument of Instructions</strong> as contained in GoI Act 1935: <strong>Dr. B. R. Ambedkar</strong>.</span>
+                    <span class="lang-hi">डॉ. आंबेडकर ने इन्हें संविधान की 'अनोखी विशेषता' तथा भारत शासन अधिनियम 1935 के 'इंस्ट्रूमेंट ऑफ इंस्ट्रक्शंस' के समान बताया।</span>
+                  </div>
+                </li>
+                <li class="study-bullet">
+                  <div class="bilingual-block">
+                    <span class="lang-en"><strong>DPSPs have Moral and Political sanctions.</strong></span>
+                    <span class="lang-hi">DPSP के पीछे नैतिक एवं राजनीतिक जनमत की शक्ति है।</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Scholar Comments -->
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #7c3aed;">
+                Comments on DPSP (विद्वानों के प्रसिद्ध कथन)
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
+                
+                <div class="callout-box" style="margin:0; border-left-color: #1e40af;">
+                  <strong>B. N. Rau :</strong>
+                  <p style="font-size: 0.88rem; margin-top: 0.2rem;"><em>"Moral Precepts for the authorities of state"</em></p>
+                  <div class="lang-hi" style="font-size: 0.85rem;">राज्य के प्राधिकारियों के लिए नैतिक निर्देश।</div>
+                </div>
+
+                <div class="callout-box" style="margin:0; border-left-color: #059669;">
+                  <strong>Granville Austin :</strong>
+                  <p style="font-size: 0.88rem; margin-top: 0.2rem;"><em>"Conscience of Constitution"</em></p>
+                  <div class="lang-hi" style="font-size: 0.85rem;">मूल अधिकारों व DPSP को संविधान की 'अंतरात्मा' कहा।</div>
+                </div>
+
+                <div class="callout-box" style="margin:0; border-left-color: #d97706;">
+                  <strong>K. T. Shah :</strong>
+                  <p style="font-size: 0.88rem; margin-top: 0.2rem;"><em>"Cheque payable by the bank at its own convenience"</em></p>
+                  <div class="lang-hi" style="font-size: 0.85rem;">एक ऐसा चेक जिसका भुगतान बैंक अपनी सुविधानुसार करता है।</div>
+                </div>
+
+                <div class="callout-box" style="margin:0; border-left-color: #dc2626;">
+                  <strong>K. C. Wheare :</strong>
+                  <p style="font-size: 0.88rem; margin-top: 0.2rem;"><em>"Manifesto of aims and aspirations"</em></p>
+                  <div class="lang-hi" style="font-size: 0.85rem;">लक्ष्यों और आकांक्षाओं का घोषणा-पत्र।</div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: ARTICLES 36 TO 39 (STATE, WELFARE & PRINCIPLES)
+           ==================================================================== -->
+      <section class="study-card" id="sec-articles-36-39">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ 2. Articles 36 to 39 (Definition, Application, Welfare & Key Principles)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <!-- Article 36 -->
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 36 : Definition of State (राज्य की परिभाषा)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Defines the term "State" as it is used in Part III.</li>
+                <li class="study-bullet"><strong>The meaning of "State" here is the same as in Article 12</strong> under Fundamental Rights (Govt, Parliament, State Govts, Legislatures, Local Authorities, PSUs).</li>
+              </ul>
+            </div>
+
+            <!-- Article 37 -->
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 37 : Application of the Principles (तत्वों का लागू होना)</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>They are non-justiciable in nature</strong> (न्यायालय द्वारा अप्रवर्तनीय).</li>
+                <li class="study-bullet">It is the <strong>duty of the State to apply these principles in making laws</strong>; these are fundamental in the governance of the country.</li>
+              </ul>
+            </div>
+
+            <!-- Article 38 -->
+            <div class="offer-plan-card" style="grid-column: span 2;">
+              <div class="offer-plan-title" style="color: #059669;">
+                Article 38 : State to Secure a Social Order for the Welfare of the People
+              </div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.4rem;">
+                <li class="study-bullet">
+                  <strong>(a)</strong> The State must promote people's welfare by securing a social order permeated by <strong>Justice — Social, Economic, and Political</strong>.
+                </li>
+                <li class="study-bullet">
+                  <strong>(b)</strong> The State shall minimize inequalities in <strong>income, status, facilities, and opportunities</strong> (Added by <strong>44th Constitutional Amendment Act, 1978</strong>).
+                </li>
+              </ul>
+            </div>
+
+            <!-- Article 39 -->
+            <div class="offer-plan-card" style="grid-column: span 2;">
+              <div class="offer-plan-title" style="color: #d97706;">
+                Article 39 : Certain Principles of Policy to be Followed by the State (6 Directives)
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; font-size: 0.88rem;">
+                <p>• <strong>(a)</strong> Adequate means of <strong>Livelihood for all citizens</strong> (जीविका के पर्याप्त साधन)।</p>
+                <p>• <strong>(b) Fair distribution of material resources</strong> for the common good (संसाधनों का लोकहित में वितरण)।</p>
+                <p>• <strong>(c) Avoiding concentration of wealth</strong> and production to common detriment (धन का अकेंद्रीकरण)।</p>
+                <p>• <strong>(d) Equal pay for equal work</strong> for both men and women (समान कार्य के लिए समान वेतन)।</p>
+                <p>• <strong>(e)</strong> Protection of workers' health and children from exploitation (स्वास्थ्य व शक्ति का संरक्षण)।</p>
+                <p>• <strong>(f) Proper development opportunities for children</strong> in conditions of freedom & dignity (Added by <strong>42nd Amendment, 1976</strong>)।</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: ARTICLES 39A TO 49
+           ==================================================================== -->
+      <section class="study-card" id="sec-articles-39a-49">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 3. Articles 39A to 49 (Detailed Directive Principles)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 39A</div>
+              <p style="font-size: 0.88rem;"><strong>Equal Justice and Free Legal Aid</strong> to the poor & weaker sections (Added by <strong>42nd CA, 1976</strong> - led to NALSA Act 1987).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #059669;">Article 40</div>
+              <p style="font-size: 0.88rem;"><strong>Organisation of Village Panchayats</strong> as units of self-government (Gandhian Principle - led to 73rd Amendment).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #d97706;">Article 41</div>
+              <p style="font-size: 0.88rem;"><strong>Right to Work, Education, and Public Assistance</strong> in cases of unemployment, old age, sickness and disablement (e.g. MGNREGA).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 42</div>
+              <p style="font-size: 0.88rem;"><strong>Just and Humane Working Conditions & Maternity Relief</strong> (काम की न्यायसंगत दशाएं व प्रसूति सहायता - Maternity Benefit Act).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 43</div>
+              <p style="font-size: 0.88rem;"><strong>Living Wages and Decent Working Conditions</strong>, promotion of cottage industries in rural areas on individual/cooperative basis.</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #ea580c;">Article 43A</div>
+              <p style="font-size: 0.88rem;"><strong>Workers' Participation in Management of Industries</strong> (Added by <strong>42nd CA, 1976</strong>).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #0284c7;">Article 43B</div>
+              <p style="font-size: 0.88rem;"><strong>Promotion of Cooperative Societies</strong> — voluntary formation, autonomous functioning (Added by <strong>97th CA, 2011</strong>).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #be123c;">Article 44</div>
+              <p style="font-size: 0.88rem;"><strong>Uniform Civil Code (UCC)</strong> — The State shall endeavour to secure for the citizens a uniform civil code throughout the territory of India.</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #1e40af;">Article 45</div>
+              <p style="font-size: 0.88rem;"><strong>Early Childhood Care and Education</strong> for children <strong>below 6 years</strong> (Subject matter changed by <strong>86th CA, 2002</strong> after Art 21A).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #059669;">Article 46</div>
+              <p style="font-size: 0.88rem;"><strong>Promotion of Educational and Economic Interests of SCs, STs, and Weaker Sections</strong>, and protection from social injustice.</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #d97706;">Article 47</div>
+              <p style="font-size: 0.88rem;"><strong>Duty to Raise Nutrition, Living Standards & Public Health</strong>; <strong>Prohibit consumption of intoxicating drinks and drugs</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 48</div>
+              <p style="font-size: 0.88rem;"><strong>Organisation of Agriculture and Animal Husbandry</strong> on modern scientific lines; <strong>Prohibit slaughter of cows, calves, and useful cattle</strong>.</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #059669;">Article 48A</div>
+              <p style="font-size: 0.88rem;"><strong>Protection of Environment, Forests, and Wildlife</strong> (Added by <strong>42nd CA, 1976</strong>).</p>
+            </div>
+
+            <div class="offer-plan-card">
+              <div class="offer-plan-title" style="color: #dc2626;">Article 49</div>
+              <p style="font-size: 0.88rem;"><strong>Protection of Monuments and Places of National Importance</strong> declared by Parliament.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: ARTICLES 50 & 51
+           ==================================================================== -->
+      <section class="study-card" id="sec-articles-50-51">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🕊️ 4. Articles 50 & 51 (Separation of Judiciary & International Peace)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin: 0;">
+              <h4 style="color: #2563eb; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.4rem;">
+                Article 50 : Separation of Judiciary from Executive
+              </h4>
+              <p style="font-size: 0.9rem; line-height: 1.6;">
+                Separation of the judiciary from the executive in the public services of the State to ensure independence of the judicial system.
+              </p>
+              <div class="lang-hi" style="font-size: 0.85rem; margin-top: 0.35rem;">
+                राज्य की लोक सेवाओं में न्यायपालिका को कार्यपालिका से पृथक करना।
+              </div>
+            </div>
+
+            <div class="callout-box" style="border-left-color: #059669; background: var(--bg-card-secondary); margin: 0;">
+              <h4 style="color: #059669; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.4rem;">
+                Article 51 : Promotion of International Peace and Security
+              </h4>
+              <p style="font-size: 0.9rem; line-height: 1.6;">
+                Promote international peace & security; maintain just and honourable relations; foster respect for international law; encourage settlement of disputes by arbitration.
+              </p>
+              <div class="lang-hi" style="font-size: 0.85rem; margin-top: 0.35rem;">
+                अंतर्राष्ट्रीय शांति और सुरक्षा की अभिवृद्धि तथा राष्ट्रों के बीच न्यायसंगत व सम्मानपूर्ण संबंधों को बढ़ावा देना।
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: 3-FOLD CLASSIFICATION OF DPSPS
+           ==================================================================== -->
+      <section class="study-card" id="sec-dpsp-classification">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🗂️ 5. Three-Fold Classification of DPSPs</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #d97706; background: #fef3c7; color: #92400e; margin-top: 0;">
+            <strong>⚠️ Note:</strong> This classification of DPSPs into Socialist, Gandhian, and Liberal-Intellectual is <strong>NOT mentioned in the Constitution</strong> (it is an ideological categorization by scholars).
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.25rem;">
+            
+            <div class="gov-card communist">
+              <div class="gov-card-header">1. Socio-Economic / Socialistic</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">Aim for social & economic welfare, equality and welfare state.</p>
+                <div style="font-weight: 800; color: #1e40af; font-size: 0.9rem;">Articles: 38, 39, 39A, 41, 42, 43, 43A, 47</div>
+              </div>
+            </div>
+
+            <div class="gov-card monarchic">
+              <div class="gov-card-header">2. Gandhian Principles</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">Decentralized governance, cottage industries, self-sufficiency, prohibition.</p>
+                <div style="font-weight: 800; color: #92400e; font-size: 0.9rem;">Articles: 40, 43, 43B, 46, 47, 48</div>
+              </div>
+            </div>
+
+            <div class="gov-card totalitarian">
+              <div class="gov-card-header">3. Liberal-Intellectual</div>
+              <div class="gov-card-body">
+                <p style="font-size: 0.85rem; margin-bottom: 0.4rem;">Individual freedoms, UCC, rational state, environment, international peace.</p>
+                <div style="font-weight: 800; color: #6d28d9; font-size: 0.9rem;">Articles: 44, 45, 48, 48A, 49, 50, 51</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: DPSPS ADDED THROUGH AMENDMENTS
+           ==================================================================== -->
+      <section class="study-card" id="sec-dpsp-amendments">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚡ 6. DPSPs Added Through Constitutional Amendments</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 0;">
+            <h4 style="color: #2563eb; font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">
+              42nd Constitutional Amendment Act, 1976 (Added 4 Directives)
+            </h4>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.65rem; font-size: 0.88rem;">
+              <p>• <strong>Article 39(f):</strong> Children's healthy development</p>
+              <p>• <strong>Article 39A:</strong> Equal justice & free legal aid to poor</p>
+              <p>• <strong>Article 43A:</strong> Participation of workers in management</p>
+              <p>• <strong>Article 48A:</strong> Protect environment & safeguard wildlife</p>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">44th CA (1978)</div>
+              <p style="font-size: 0.85rem;"><strong>Article 38(2):</strong> State to minimize inequalities in income, status, facilities.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">86th CA (2002)</div>
+              <p style="font-size: 0.85rem;"><strong>Article 45:</strong> Early childhood care and education for children below 6 years.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">97th CA (2011)</div>
+              <p style="font-size: 0.85rem;"><strong>Article 43B:</strong> Promotion of voluntary formation of Cooperative Societies.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: FRS VS DPSPS CASES & COMPARISON TABLE
+           ==================================================================== -->
+      <section class="study-card" id="sec-fr-vs-dpsp">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 7. Fundamental Rights (FRs) vs DPSPs: Cases & Differences</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="timeline-strip" style="grid-template-columns: repeat(4, 1fr);">
+            
+            <div class="timeline-step">
+              <span class="timeline-year">1951</span>
+              <h4 style="font-size: 0.95rem; font-weight: 800; color: #dc2626;">Champakam Dorairajan</h4>
+              <p style="font-size: 0.825rem; margin-top: 0.35rem;">FRs prevail over DPSPs. FRs are amendable.</p>
+            </div>
+
+            <div class="timeline-step">
+              <span class="timeline-year" style="background:#ea580c;">1967</span>
+              <h4 style="font-size: 0.95rem; font-weight: 800; color: #ea580c;">Golaknath Case</h4>
+              <p style="font-size: 0.825rem; margin-top: 0.35rem;">Parliament cannot revoke/amend FRs for DPSPs. Led to 25th CA (Art 31C).</p>
+            </div>
+
+            <div class="timeline-step">
+              <span class="timeline-year" style="background:#059669;">1973</span>
+              <h4 style="font-size: 0.95rem; font-weight: 800; color: #059669;">Kesavananda Bharati</h4>
+              <p style="font-size: 0.825rem; margin-top: 0.35rem;">Upheld Art 31C (39b/c over 14/19), but struck down clause barring judicial review.</p>
+            </div>
+
+            <div class="timeline-step">
+              <span class="timeline-year" style="background:#7c3aed;">1980</span>
+              <h4 style="font-size: 0.95rem; font-weight: 800; color: #7c3aed;">Minerva Mills Case</h4>
+              <p style="font-size: 0.825rem; margin-top: 0.35rem;">Constitution is founded on the <strong>bedrock of balance between FRs and DPSPs</strong>.</p>
+            </div>
+
+          </div>
+
+          <!-- Difference Table -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.75rem 0 0.75rem;">
+            Key Differences: Fundamental Rights vs DPSPs
+          </h4>
+
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Fundamental Rights (Part III)</th>
+                  <th>DPSPs (Part IV)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Nature of Obligation</strong></td>
+                  <td>Negative obligations (prohibits state action).</td>
+                  <td>Positive obligations (urges state action).</td>
+                </tr>
+                <tr>
+                  <td><strong>Enforceability</strong></td>
+                  <td>Justiciable (enforceable by courts).</td>
+                  <td>Non-justiciable (not legally enforceable).</td>
+                </tr>
+                <tr>
+                  <td><strong>Democracy Goal</strong></td>
+                  <td>Establishes <strong>Political Democracy</strong>.</td>
+                  <td>Establishes <strong>Social & Economic Democracy</strong>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Sanction Behind</strong></td>
+                  <td>Protected by legal sanctions.</td>
+                  <td>Backed by moral and political sanctions.</td>
+                </tr>
+                <tr>
+                  <td><strong>Focus / Scope</strong></td>
+                  <td>Oriented towards <strong>individual welfare</strong>.</td>
+                  <td>Focused on <strong>societal / community welfare</strong>.</td>
+                </tr>
+                <tr>
+                  <td><strong>Implementation</strong></td>
+                  <td>Automatically enforceable; laws violating FRs are void.</td>
+                  <td>Require legislative enactment; courts cannot invalidate laws violating DPSP.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: PART IVA - FUNDAMENTAL DUTIES [ARTICLE 51A]
+           ==================================================================== -->
+      <section class="study-card" id="sec-part4a-duties">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🛡️ 8. PART IVA — Fundamental Duties [Article 51A]</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Basic Pointers on Fundamental Duties</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.4rem;">
+                <li class="study-bullet"><strong>Borrowed from the USSR (Soviet Union).</strong></li>
+                <li class="study-bullet">Statutory and <strong>non-enforceable / non-justiciable</strong> (unless specific statutes enforce them).</li>
+                <li class="study-bullet"><strong>Not originally part of the Constitution</strong> (added later).</li>
+                <li class="study-bullet"><strong>Applicable ONLY to Indian citizens</strong>, not to foreigners.</li>
+                <li class="study-bullet">Introduced through the <strong>42nd Constitutional Amendment Act, 1976</strong>.</li>
+                <li class="study-bullet">Initially <strong>10 Fundamental Duties</strong> were added in 1976.</li>
+                <li class="study-bullet"><strong>Currently there are 11 Fundamental Duties.</strong></li>
+                <li class="study-bullet">The 11th duty [51A(k)] was added by the <strong>86th Constitutional Amendment Act, 2002</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #d97706; background: #fef3c7; color: #92400e; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+              <strong style="font-size: 1.1rem; color: #92400e;">⭐ Sardar Swaran Singh Committee</strong>
+              <p style="font-size: 0.9rem; margin-top: 0.5rem; line-height: 1.5;">
+                On the recommendation of the <strong>Sardar Swaran Singh Committee (1976)</strong>, Fundamental Duties were added to the Indian Constitution.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: THE 11 FUNDAMENTAL DUTIES (A TO K)
+           ==================================================================== -->
+      <section class="study-card" id="sec-11-duties">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📋 9. The 11 Fundamental Duties [Article 51A(a) to (k)]</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #1e40af;">(a) Constitution, Flag & Anthem</div>
+              <p style="font-size: 0.85rem;">To abide by the Constitution and respect its ideals and institutions, the National Flag and the National Anthem.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #ea580c;">(b) Cherish Noble Ideals</div>
+              <p style="font-size: 0.85rem;">To cherish and follow the noble ideals that inspired the national struggle for freedom.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">(c) Sovereignty, Unity & Integrity</div>
+              <p style="font-size: 0.85rem;">To uphold and protect the sovereignty, unity and integrity of India.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">(d) Defend Country & National Service</div>
+              <p style="font-size: 0.85rem;">To defend the country and render national service when called upon to do so.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">(e) Harmony, Brotherhood & Women's Dignity</div>
+              <p style="font-size: 0.85rem;">To promote harmony and common brotherhood; to renounce practices derogatory to the dignity of women.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">(f) Value & Preserve Rich Heritage</div>
+              <p style="font-size: 0.85rem;">To value and preserve the rich heritage of our composite culture.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">(g) Protect Natural Environment</div>
+              <p style="font-size: 0.85rem;">To protect and improve forests, lakes, rivers and wildlife, and to have compassion for living creatures.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">(h) Scientific Temper & Humanism</div>
+              <p style="font-size: 0.85rem;">To develop the scientific temper, humanism and the spirit of inquiry and reform.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">(i) Safeguard Public Property & Abjure Violence</div>
+              <p style="font-size: 0.85rem;">To safeguard public property and to abjure violence.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">(j) Strive Towards Excellence</div>
+              <p style="font-size: 0.85rem;">To strive towards excellence in all spheres of individual and collective activity.</p>
+            </div>
+
+            <div class="offer-plan-card" style="grid-column: span 2; margin:0; border: 2px solid #059669; background: #ecfdf5;">
+              <div class="offer-plan-title" style="color: #065f46;">(k) Opportunity for Children's Education (6 to 14 Years)</div>
+              <p style="font-size: 0.88rem; color: #065f46;">
+                Duty of a parent or guardian to provide opportunities for education to his child or ward between the age of six and fourteen years. (<strong>Added through 86th Constitutional Amendment Act, 2002</strong>).
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: JUSTICE VERMA COMMITTEE & ENFORCING STATUTES
+           ==================================================================== -->
+      <section class="study-card" id="sec-verma-committee">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 10. Justice Verma Committee (1999) & Enforcing Laws</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 0;">
+            <strong style="color: #2563eb;">Justice Verma Committee (1999):</strong>
+            <p style="font-size: 0.9rem; margin-top: 0.25rem;">
+              Identified the existence of legal provisions for the implementation of Fundamental Duties and recommended creating awareness and teaching school children about their duties.
+            </p>
+          </div>
+
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.5rem 0 0.75rem;">
+            Laws Reflecting and Enforcing Fundamental Duties:
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.88rem;">
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>UAPA Act (1967):</strong> Prevents activities threatening sovereignty & integrity ➔ <strong>Duty (c)</strong>.
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>Prevention of Insults to National Honour Act (1971):</strong> Respect for Flag & Anthem ➔ <strong>Duty (a)</strong>.
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>Wildlife Protection Act (1972):</strong> Protects wild animals and birds ➔ <strong>Duty (g)</strong>.
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>Representation of the People Act (1951):</strong> Regulates democratic electoral process ➔ <strong>Duty (a)</strong>.
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>Indian Penal Code (IPC / BNS):</strong> Enforces public order, bans acts derogatory to women ➔ <strong>Duties (e) & (i)</strong>.
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong>Protection of Civil Rights Act (1955):</strong> Eliminates untouchability, promotes equality ➔ <strong>Duty (e)</strong>.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 11: TRICKS TO LEARN ALL 11 FUNDAMENTAL DUTIES
+           ==================================================================== -->
+      <section class="study-card" id="sec-fd-tricks">
+        <div class="study-card-header">
+          <h2 class="study-card-title">💡 11. Complete Memory Tricks: Learn All 11 Fundamental Duties</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="table-responsive">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Letter</th>
+                  <th>Memory Trick Formula</th>
+                  <th>Fundamental Duty Summary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="color:#2563eb; font-size:1.1rem;">a</strong></td>
+                  <td><strong>A</strong>nthem aur Flag ki respect</td>
+                  <td>Abide by Constitution, Flag and National Anthem</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#ea580c; font-size:1.1rem;">b</strong></td>
+                  <td><strong>B</strong>hagat Singh / Bapu ke noble ideals ko follow karna</td>
+                  <td>Cherish noble ideals of freedom struggle</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#059669; font-size:1.1rem;">c</strong></td>
+                  <td>Means <strong>3</strong> pillars: Sovereignty, Unity, Integrity</td>
+                  <td>Uphold sovereignty, unity & integrity of India</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#7c3aed; font-size:1.1rem;">d</strong></td>
+                  <td><strong>D</strong>efend the country (देश की रक्षा)</td>
+                  <td>Defend nation and render national service</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#dc2626; font-size:1.1rem;">e</strong></td>
+                  <td><strong>E</strong>quality, brotherhood, no derogatory practices to women</td>
+                  <td>Promote harmony, renounce derogatory practices to women</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#d97706; font-size:1.1rem;">f</strong></td>
+                  <td><strong>F</strong>ort / Heritage ki value aur composite culture care</td>
+                  <td>Value and preserve rich heritage of composite culture</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#059669; font-size:1.1rem;">g</strong></td>
+                  <td><strong>G</strong>reenery & Environment protection</td>
+                  <td>Protect natural environment (forests, lakes, wildlife)</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#2563eb; font-size:1.1rem;">h</strong></td>
+                  <td><strong>H</strong>umanism, scientific temper & spirit of inquiry</td>
+                  <td>Develop scientific temper, humanism, inquiry & reform</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#dc2626; font-size:1.1rem;">i</strong></td>
+                  <td>Eye for an eye makes whole world blind ➔ Abjure V<strong>i</strong>olence</td>
+                  <td>Safeguard public property and abjure violence</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#7c3aed; font-size:1.1rem;">j</strong></td>
+                  <td><strong>J</strong>adeja ki tarah excellent performer in all spheres</td>
+                  <td>Strive towards excellence in individual/collective activity</td>
+                </tr>
+                <tr>
+                  <td><strong style="color:#059669; font-size:1.1rem;">k</strong></td>
+                  <td><strong>K</strong>ids' school education (6 to 14 years - 86th CA 2002)</td>
+                  <td>Duty of parents/guardians to provide education opportunities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <strong>💡 Did You Know?</strong> Fundamental duties are provided for <strong>Indian citizens ONLY and NOT for Foreigners</strong>.
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Lecture 6: DPSP & Fundamental Duties</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>
