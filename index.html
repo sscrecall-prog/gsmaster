@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GS Master Notes Hub | संपूर्ण सामान्य अध्ययन डिजिटल नोट्स</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-container">
+      <div class="brand-logo-badge">GS</div>
+      <div class="brand-titles">
+        <span class="brand-main-title">GS MASTER NOTES</span>
+        <span class="brand-subtitle-tag">⚡ GENERAL STUDIES STUDY PORTAL</span>
+      </div>
+    </div>
+
+    <!-- Global Search -->
+    <div class="search-container">
+      <span class="search-icon-left">🔍</span>
+      <input type="text" id="global-search" class="search-input-box" placeholder="Search any topic, chapter, article across all subjects (e.g. Making of Constitution, PYQ 1)..." autocomplete="off">
+      <button id="search-clear" class="search-clear-btn" aria-label="Clear Search">✕</button>
+    </div>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <!-- Language Mode Switcher -->
+      <div class="control-pill-group" title="Language Mode">
+        <button class="control-btn lang-btn active" data-lang="all">EN + HI</button>
+        <button class="control-btn lang-btn" data-lang="en">EN</button>
+        <button class="control-btn lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="control-pill-group">
+        <button class="control-btn font-size-btn active" data-size="normal">A</button>
+        <button class="control-btn font-size-btn" data-size="large">A+</button>
+        <button class="control-btn font-size-btn" data-size="xlarge">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="icon-button" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Main Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- Hero Hub Banner -->
+    <section class="hero-hub-card">
+      <div class="hero-tag">🎓 Comprehensive GK Study Portal</div>
+      <h1 class="hero-title">General Studies Master Notes</h1>
+      <div class="hero-title-hi">संपूर्ण सामान्य अध्ययन डिजिटल नोट्स हब</div>
+      <p class="hero-desc">
+        All GK subjects organized subject-wise, chapter-wise, and lecture-wise with 100% source fidelity, bilingual (Hindi + English) explanations, interactive mindmaps, and PYQ solutions.
+      </p>
+
+      <!-- Quick Stats -->
+      <div class="hero-stats-row">
+        <div class="stat-box">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Total Subjects (विषय)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">9</div>
+          <div class="stat-label">Active Lectures (लेक्चर्स)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">26</div>
+          <div class="stat-label">Solved PYQs (प्रश्न)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Bilingual Fidelity</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📚 Subjects Explorer</h2>
+          <span class="section-title-hi">विषयवार अध्ययन खंड</span>
+        </div>
+      </div>
+
+      <div class="subjects-grid">
+        
+        <!-- 1. Polity (Active) -->
+        <div class="subject-card polity">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">🏛️</div>
+            <div class="subject-name">Indian Polity</div>
+            <div class="subject-name-hi">भारतीय राजव्यवस्था व संविधान</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-active">✅ 9 Lectures Added</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Content Type</span>
+                <strong>Theory (8) + PYQs (1 Set)</strong>
+              </li>
+              <li class="subject-meta-item">
+                <span>Latest Chapter</span>
+                <strong>Prime Minister & CoM (भाग 5: Arts 74–78)</strong>
+              </li>
+            </ul>
+            <a href="#polity-lectures" class="subject-action-btn">
+              <span>Explore Polity Lectures</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. History -->
+        <div class="subject-card history">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">📜</div>
+            <div class="subject-name">Indian History</div>
+            <div class="subject-name-hi">भारतीय इतिहास (प्राचीन/मध्य/आधुनिक)</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-pending">⏳ PDF Upload Pending</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Coverage</span>
+                <span>Ancient, Medieval, Modern</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Status</span>
+                <span>Ready to Integrate</span>
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="subject-action-btn" style="opacity: 0.6; cursor: not-allowed;">
+              <span>Upload PDF to Add Notes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Geography -->
+        <div class="subject-card geography">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">🌍</div>
+            <div class="subject-name">Geography</div>
+            <div class="subject-name-hi">भूगोल (भारत एवं विश्व)</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-pending">⏳ PDF Upload Pending</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Coverage</span>
+                <span>Physical, Rivers, Climate, Maps</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Status</span>
+                <span>Ready to Integrate</span>
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="subject-action-btn" style="opacity: 0.6; cursor: not-allowed;">
+              <span>Upload PDF to Add Notes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Economics -->
+        <div class="subject-card economics">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">📊</div>
+            <div class="subject-name">Economics</div>
+            <div class="subject-name-hi">भारतीय अर्थव्यवस्था</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-pending">⏳ PDF Upload Pending</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Coverage</span>
+                <span>Budget, National Income, Banking</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Status</span>
+                <span>Ready to Integrate</span>
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="subject-action-btn" style="opacity: 0.6; cursor: not-allowed;">
+              <span>Upload PDF to Add Notes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. General Science -->
+        <div class="subject-card science">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">🧪</div>
+            <div class="subject-name">General Science</div>
+            <div class="subject-name-hi">सामान्य विज्ञान (PCB)</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-pending">⏳ PDF Upload Pending</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Coverage</span>
+                <span>Physics, Chemistry, Biology</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Status</span>
+                <span>Ready to Integrate</span>
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="subject-action-btn" style="opacity: 0.6; cursor: not-allowed;">
+              <span>Upload PDF to Add Notes</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 6. Static GK -->
+        <div class="subject-card static-gk">
+          <div class="subject-card-header">
+            <div class="subject-icon-badge">🎯</div>
+            <div class="subject-name">Static GK</div>
+            <div class="subject-name-hi">स्टैटिक सामान्य ज्ञान</div>
+          </div>
+          <div class="subject-card-body">
+            <ul class="subject-meta-list">
+              <li class="subject-meta-item">
+                <span>Available Lectures</span>
+                <span class="status-badge status-pending">⏳ PDF Upload Pending</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Coverage</span>
+                <span>Dance, Music, Books, Awards, Sports</span>
+              </li>
+              <li class="subject-meta-item">
+                <span>Status</span>
+                <span>Ready to Integrate</span>
+              </li>
+            </ul>
+            <a href="javascript:void(0)" class="subject-action-btn" style="opacity: 0.6; cursor: not-allowed;">
+              <span>Upload PDF to Add Notes</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Available Lectures List Section -->
+    <section class="section-container" id="polity-lectures">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">📖 Available Lectures & PYQ Sets</h2>
+          <span class="section-title-hi">उपलब्ध लेक्चर्स एवं अभ्यास प्रश्न</span>
+        </div>
+      </div>
+
+      <div class="lectures-list-container">
+        
+        <!-- Lecture 1: Making of Constitution (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon">📘</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 1</span>
+                <span class="meta-pill">THEORY & MINDMAPS</span>
+                <span class="meta-pill">12 SECTIONS</span>
+              </div>
+              <div class="lecture-title">Making of Constitution (Genesis, Committees & Enactment)</div>
+              <div class="lecture-title-hi">संविधान का निर्माण (पृष्ठभूमि, समितियां, सत्र एवं महत्वपूर्ण तथ्य)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-1-making-of-constitution.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 2: Salient Features of Indian Constitution (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #ede9fe; color: #7c3aed;">📜</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 2</span>
+                <span class="meta-pill">THEORY & SCHEDULES 1-12</span>
+                <span class="meta-pill">TEARS OF OLD PM</span>
+              </div>
+              <div class="lecture-title">Salient Features of Indian Constitution (Schedules 1-12, Federalism & 42nd CAA)</div>
+              <div class="lecture-title-hi">संविधान की प्रमुख विशेषताएं (अनुसूचियां 1-12, संघवाद, शास्त्रीय भाषाएं व ट्रिक्स)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-2-salient-features.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 3: Preamble (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #ecfdf5; color: #059669;">📜</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 3</span>
+                <span class="meta-pill">THEORY & ESSENCE</span>
+                <span class="meta-pill">LANDMARK CASES</span>
+              </div>
+              <div class="lecture-title">Preamble of Constitution (Philosophy, 5 Pillars, Objectives & Kesavananda Case)</div>
+              <div class="lecture-title-hi">भारतीय संविधान की उद्देशिका (प्रस्तावना, संप्रभुता, न्याय, स्वतंत्रता एवं 42वां संशोधन)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-3-preamble.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 4: Part 1 & 2 of Constitution (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #e0e7ff; color: #4338ca;">🏛️</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 4</span>
+                <span class="meta-pill">PART 1 & 2 (ARTS 1–11)</span>
+                <span class="meta-pill">SPECIAL PROVISIONS 371A-J</span>
+                <span class="meta-pill">CITIZENSHIP & CAA 2019</span>
+              </div>
+              <div class="lecture-title">Part 1 & 2: Union & Its Territory and Citizenship (State Formation, Arts 371A-J & CAA)</div>
+              <div class="lecture-title-hi">भाग-1 एवं 2: संघ व उसका राज्यक्षेत्र एवं नागरिकता (राज्य पुनर्गठन, अनुच्छेद 371A-J व CAA 2019)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-4-part-1-and-2.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 5: Fundamental Rights (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #fee2e2; color: #dc2626;">⚖️</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 5</span>
+                <span class="meta-pill">PART 3 (ARTS 12–35)</span>
+                <span class="meta-pill">6 RIGHTS & 5 WRITS</span>
+                <span class="meta-pill">LANDMARK JUDGMENTS</span>
+              </div>
+              <div class="lecture-title">Fundamental Rights (Part III, Articles 12–35, 5 Writs & Landmark Cases)</div>
+              <div class="lecture-title-hi">भाग-3: मूल अधिकार (अनुच्छेद 12 से 35, 5 प्रकार की रिटें, इंदिरा साहनी व मेनका गांधी वाद)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-5-fundamental-rights.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 6: DPSP & Fundamental Duties (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">📜</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 6</span>
+                <span class="meta-pill">PART 4 & 4A (ARTS 36–51A)</span>
+                <span class="meta-pill">WELFARE STATE & UCC</span>
+                <span class="meta-pill">11 FUNDAMENTAL DUTIES</span>
+              </div>
+              <div class="lecture-title">DPSP & Fundamental Duties (Part IV & IVA, Articles 36–51A, UCC & Verma Committee)</div>
+              <div class="lecture-title-hi">राज्य के नीति निदेशक तत्व व मूल कर्तव्य (अनुच्छेद 36-51A, समान नागरिक संहिता व 11 कर्तव्य)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-6-dpsp-and-fundamental-duties.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 7: President and Vice-President (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #e0e7ff; color: #3730a3;">🏛️</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 7</span>
+                <span class="meta-pill">PART 5 (ARTS 52–72)</span>
+                <span class="meta-pill">IMPEACHMENT & PARDON</span>
+                <span class="meta-pill">CHRONOLOGY 1950–PRESENT</span>
+              </div>
+              <div class="lecture-title">President & Vice-President (Part V, Articles 52–72, Impeachment, Article 72 & Tables)</div>
+              <div class="lecture-title-hi">राष्ट्रपति एवं उपराष्ट्रपति (अनुच्छेद 52-72, महाभियोग, 5 क्षमादान शक्तियां व पूर्ण पदावधि सूची)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-7-president-and-vice-president.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 8: Prime Minister and Council of Ministers (Theory) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #ecfdf5; color: #065f46;">🇮🇳</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • LECTURE 8</span>
+                <span class="meta-pill">PART 5 (ARTS 74–78)</span>
+                <span class="meta-pill">ATTORNEY GENERAL (ART 76)</span>
+                <span class="meta-pill">91ST CA (15% CAP)</span>
+              </div>
+              <div class="lecture-title">Prime Minister & Council of Ministers (Part V, Articles 74–78, Attorney General & PM History)</div>
+              <div class="lecture-title-hi">प्रधानमंत्री व मंत्रिपरिषद (अनुच्छेद 74-78, महान्यायवादी, 91वां संशोधन व पूर्ण PM पदावधि सूची)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-8-prime-minister-and-council-of-ministers.html" class="lecture-action-btn">
+            <span>Read Notes / नोट्स पढ़ें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Lecture 1: PYQ Series (Practice Questions) -->
+        <div class="lecture-row-card">
+          <div class="lecture-info">
+            <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">📝</div>
+            <div class="lecture-text-content">
+              <div class="lecture-meta-tags">
+                <span class="meta-pill polity-tag">POLITY • PYQ SET 1</span>
+                <span class="meta-pill">26 PYQS</span>
+                <span class="meta-pill">SOLVED & DETAILED EXPLANATIONS</span>
+              </div>
+              <div class="lecture-title">Polity Lecture-1 PYQ Series (26 SSC Questions & Case Laws)</div>
+              <div class="lecture-title-hi">राजव्यवस्था लेक्चर-1 अभ्यास प्रश्न (26 PYQs एवं विस्तृत व्याख्या)</div>
+            </div>
+          </div>
+          <a href="subjects/polity/lecture-1-pyqs.html" class="lecture-action-btn">
+            <span>Solve PYQs / अभ्यास करें</span>
+            <span>→</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Upload Helper Box -->
+    <div class="upload-helper-box">
+      <div class="upload-icon">📤</div>
+      <h3 class="upload-heading">Add More Lectures / नए लेक्चर्स जोड़ें</h3>
+      <p class="upload-desc">
+        Aap bas mujhe apne kisi bhi subject (Polity, History, Geography, Economics, Science, Static GK) ka lecture PDF upload kijiye, main turant uska digital notes banakar is App mein organize kar dunga!
+      </p>
+      <div style="display: inline-flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+        <span class="meta-pill">⚡ 100% Source Accuracy</span>
+        <span class="meta-pill">🌐 Hindi + English Bilingual</span>
+        <span class="meta-pill">🎯 Interactive Quizzes & Trees</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-brand">GS MASTER STUDY APP</div>
+    <div class="footer-sub">Smart Bilingual Learning Portal for SSC & Competitive Examinations</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
