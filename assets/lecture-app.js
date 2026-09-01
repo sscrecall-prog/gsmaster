@@ -1,5 +1,6 @@
 /**
- * Making of Constitution - Bilingual Interactive Engine
+ * GS MASTER APP - BILINGUAL LECTURE INTERACTIVE ENGINE
+ * Ultra-Modern Reading & Navigation Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggleBtn = document.getElementById('menu-toggle');
   const sidebar = document.getElementById('app-sidebar');
   const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+  const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
   const backToTopBtn = document.getElementById('back-to-top');
   const fontSizeBtns = document.querySelectorAll('.font-size-btn');
   const langBtns = document.querySelectorAll('.lang-btn');
@@ -18,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = Array.from(document.querySelectorAll('.topic-link'));
 
   // 1. Language Display Mode Management (Both, EN, HI)
-  const savedLangMode = localStorage.getItem('moc_lang_mode') || 'all';
+  const savedLangMode = localStorage.getItem('gs_lang_mode') || 'all';
   applyLangMode(savedLangMode);
 
   langBtns.forEach(btn => {
@@ -36,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         b.classList.remove('active');
       }
     });
-    localStorage.setItem('moc_lang_mode', mode);
+    localStorage.setItem('gs_lang_mode', mode);
   }
 
-  // 2. Theme Management
-  const savedTheme = localStorage.getItem('moc_theme') || 
+  // 2. Theme Management (Light / Dark)
+  const savedTheme = localStorage.getItem('gs_theme') || 
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   
   applyTheme(savedTheme);
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (themeToggleBtn) themeToggleBtn.innerHTML = '🌙';
       if (themeToggleBtn) themeToggleBtn.title = 'Switch to Dark Mode';
     }
-    localStorage.setItem('moc_theme', theme);
+    localStorage.setItem('gs_theme', theme);
   }
 
   if (themeToggleBtn) {
@@ -66,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Font Size Management
-  const savedFontSize = localStorage.getItem('moc_font_size') || 'normal';
+  const savedFontSize = localStorage.getItem('gs_font_size') || 'normal';
   applyFontSize(savedFontSize);
 
   fontSizeBtns.forEach(btn => {
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         b.classList.remove('active');
       }
     });
-    localStorage.setItem('moc_font_size', size);
+    localStorage.setItem('gs_font_size', size);
   }
 
   // 4. Scroll Progress & ScrollSpy
@@ -137,8 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 5. Drawer Toggle Management (Desktop & Mobile)
-  const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
-
   function openSidebar() {
     if (sidebar) sidebar.classList.add('open');
     if (sidebarBackdrop) sidebarBackdrop.classList.add('open');
@@ -149,42 +149,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sidebarBackdrop) sidebarBackdrop.classList.remove('open');
   }
 
-  if (menuToggleBtn) {
-    menuToggleBtn.addEventListener('click', () => {
-      if (sidebar && sidebar.classList.contains('open')) {
-        closeSidebar();
-      } else {
-        openSidebar();
-      }
-    });
-  }
+  if (menuToggleBtn) menuToggleBtn.addEventListener('click', openSidebar);
+  if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeSidebar);
+  if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeSidebar);
 
-  if (sidebarCloseBtn) {
-    sidebarCloseBtn.addEventListener('click', closeSidebar);
-  }
-
-  if (sidebarBackdrop) {
-    sidebarBackdrop.addEventListener('click', closeSidebar);
-  }
-
-  document.querySelectorAll('.app-sidebar a').forEach(link => {
+  navLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeSidebar();
     });
   });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeSidebar();
-    }
-  });
-
-  // 6. Live Search Engine (Searches both English & Hindi)
+  // 6. Search Filter Inside Lecture
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       const q = e.target.value.trim().toLowerCase();
       if (searchClearBtn) {
-        searchClearBtn.style.display = q ? 'block' : 'none';
+        searchClearBtn.style.display = q ? 'flex' : 'none';
       }
 
       allCards.forEach(card => {
@@ -206,6 +186,52 @@ document.addEventListener('DOMContentLoaded', () => {
         allCards.forEach(c => c.style.display = 'block');
         searchInput.focus();
       }
+    });
+  }
+
+  // 7. Clipboard Copy Toast Notification
+  const toast = document.createElement('div');
+  toast.className = 'copy-toast';
+  toast.textContent = '✨ Copied to Clipboard!';
+  document.body.appendChild(toast);
+
+  function showToast(msg) {
+    toast.textContent = msg || '✨ Copied to Clipboard!';
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+    }, 2000);
+  }
+
+  document.querySelectorAll('.badge-tag, .offer-plan-title').forEach(el => {
+    el.title = 'Click to copy text';
+    el.addEventListener('click', () => {
+      const textToCopy = el.innerText;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          showToast(`📋 Copied: "${textToCopy.slice(0, 25)}..."`);
+        });
+      }
+    });
+  });
+
+  // 8. Auto-Inject Floating Thumb Navigation on Mobile
+  if (!document.querySelector('.floating-mobile-nav')) {
+    const floatBar = document.createElement('div');
+    floatBar.className = 'floating-mobile-nav';
+    floatBar.innerHTML = `
+      <a href="../../index.html" class="floating-nav-btn" title="Back to Dashboard">🏠 Hub</a>
+      <button class="floating-nav-btn" id="mobile-toc-btn">📖 विषय सूची</button>
+      <button class="floating-nav-btn" id="mobile-font-btn">A+ Font</button>
+    `;
+    document.body.appendChild(floatBar);
+
+    document.getElementById('mobile-toc-btn')?.addEventListener('click', openSidebar);
+    document.getElementById('mobile-font-btn')?.addEventListener('click', () => {
+      const curSize = htmlEl.classList.contains('font-xlarge') ? 'normal' : 
+                      htmlEl.classList.contains('font-large') ? 'xlarge' : 'large';
+      applyFontSize(curSize);
+      showToast(`🔤 Font Size: ${curSize.toUpperCase()}`);
     });
   }
 });

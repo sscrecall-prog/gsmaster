@@ -2,8 +2,13 @@
 <html lang="en" class="font-normal" data-lang-mode="all">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>GS Master Notes Hub | संपूर्ण सामान्य अध्ययन डिजिटल नोट्स</title>
+  
+  <!-- Favicon & PWA meta -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   
   <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,18 +21,18 @@
 
   <!-- App Header -->
   <header class="app-header">
-    <div class="brand-container">
+    <a href="index.html" class="brand-container" title="GS Master Hub Home">
       <div class="brand-logo-badge">GS</div>
       <div class="brand-titles">
         <span class="brand-main-title">GS MASTER NOTES</span>
         <span class="brand-subtitle-tag">⚡ GENERAL STUDIES STUDY PORTAL</span>
       </div>
-    </div>
+    </a>
 
     <!-- Global Search -->
     <div class="search-container">
       <span class="search-icon-left">🔍</span>
-      <input type="text" id="global-search" class="search-input-box" placeholder="Search any topic, chapter, article across all subjects (e.g. Making of Constitution, PYQ 1)..." autocomplete="off">
+      <input type="text" id="global-search" class="search-input-box" placeholder="Search any topic, chapter, article across all subjects (Press '/' to search)..." autocomplete="off">
       <button id="search-clear" class="search-clear-btn" aria-label="Clear Search">✕</button>
     </div>
 
@@ -86,7 +91,7 @@
     </section>
 
     <!-- Subjects Section -->
-    <section class="section-container">
+    <section class="section-container" id="subjects">
       <div class="section-header">
         <div>
           <h2 class="section-title">📚 Subjects Explorer</h2>
@@ -106,8 +111,8 @@
           <div class="subject-card-body">
             <ul class="subject-meta-list">
               <li class="subject-meta-item">
-                <span>Available Lectures</span>
-                <span class="status-badge status-active">✅ 17 Modules (Polity Complete!)</span>
+                <span>Available Modules</span>
+                <span class="status-badge status-active">✅ 17 Modules (Complete!)</span>
               </li>
               <li class="subject-meta-item">
                 <span>Content Type</span>
@@ -115,7 +120,7 @@
               </li>
               <li class="subject-meta-item">
                 <span>Latest Chapter</span>
-                <strong>Historical Acts & Evolution (1773 to 1947)</strong>
+                <strong>Historical Acts & Evolution (1773–1947)</strong>
               </li>
             </ul>
             <a href="#polity-lectures" class="subject-action-btn">
@@ -168,7 +173,7 @@
               </li>
               <li class="subject-meta-item">
                 <span>Coverage</span>
-                <span>Physical, Rivers, Climate, Maps</span>
+                <span>Physical, Indian, World Geo</span>
               </li>
               <li class="subject-meta-item">
                 <span>Status</span>
@@ -184,8 +189,8 @@
         <!-- 4. Economics -->
         <div class="subject-card economics">
           <div class="subject-card-header">
-            <div class="subject-icon-badge">📊</div>
-            <div class="subject-name">Economics</div>
+            <div class="subject-icon-badge">📈</div>
+            <div class="subject-name">Indian Economy</div>
             <div class="subject-name-hi">भारतीय अर्थव्यवस्था</div>
           </div>
           <div class="subject-card-body">
@@ -196,7 +201,7 @@
               </li>
               <li class="subject-meta-item">
                 <span>Coverage</span>
-                <span>Budget, National Income, Banking</span>
+                <span>Macroeconomics, Banking, Budget</span>
               </li>
               <li class="subject-meta-item">
                 <span>Status</span>
@@ -272,15 +277,32 @@
     <section class="section-container" id="polity-lectures">
       <div class="section-header">
         <div>
-          <h2 class="section-title">📖 Available Lectures & PYQ Sets</h2>
-          <span class="section-title-hi">उपलब्ध लेक्चर्स एवं अभ्यास प्रश्न</span>
+          <h2 class="section-title">🏛️ Indian Polity Study Modules</h2>
+          <span class="section-title-hi">भारतीय राजव्यवस्था (16 Theory + 1 Solved PYQ Set)</span>
+        </div>
+        
+        <!-- View Mode Switcher -->
+        <div class="view-mode-controls">
+          <button class="view-mode-btn active" data-view="card" title="Card View">🗂️ Cards</button>
+          <button class="view-mode-btn" data-view="compact" title="Compact List View">📋 List</button>
         </div>
       </div>
 
-      <div class="lectures-list-container">
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-container">
+        <button class="filter-tab-btn active" data-filter="all">All (17)</button>
+        <button class="filter-tab-btn" data-filter="foundations">🏛️ Foundations (Lec 1-4)</button>
+        <button class="filter-tab-btn" data-filter="rights">⚖️ Rights & DPSP (Lec 5-6)</button>
+        <button class="filter-tab-btn" data-filter="union">🇮🇳 Union Executive & Parliament (Lec 7-10)</button>
+        <button class="filter-tab-btn" data-filter="state">🏢 State & Judiciary (Lec 11-13)</button>
+        <button class="filter-tab-btn" data-filter="bodies">👥 Bodies, Emergency & Acts (Lec 14-16)</button>
+        <button class="filter-tab-btn" data-filter="pyqs">📝 Solved PYQs (1)</button>
+      </div>
+
+      <div class="lectures-list">
         
         <!-- Lecture 1: Making of Constitution (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="foundations">
           <div class="lecture-info">
             <div class="lecture-badge-icon">📘</div>
             <div class="lecture-text-content">
@@ -300,7 +322,7 @@
         </div>
 
         <!-- Lecture 2: Salient Features of Indian Constitution (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="foundations">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #ede9fe; color: #7c3aed;">📜</div>
             <div class="lecture-text-content">
@@ -319,18 +341,18 @@
           </a>
         </div>
 
-        <!-- Lecture 3: Preamble (Theory) -->
-        <div class="lecture-row-card">
+        <!-- Lecture 3: Preamble of the Constitution (Theory) -->
+        <div class="lecture-row-card" data-category="foundations">
           <div class="lecture-info">
-            <div class="lecture-badge-icon" style="background: #ecfdf5; color: #059669;">📜</div>
+            <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">⚖️</div>
             <div class="lecture-text-content">
               <div class="lecture-meta-tags">
                 <span class="meta-pill polity-tag">POLITY • LECTURE 3</span>
-                <span class="meta-pill">THEORY & ESSENCE</span>
-                <span class="meta-pill">LANDMARK CASES</span>
+                <span class="meta-pill">PREAMBLE & 5 PILLARS</span>
+                <span class="meta-pill">KESAVANANDA BHARATI CASE</span>
               </div>
-              <div class="lecture-title">Preamble of Constitution (Philosophy, 5 Pillars, Objectives & Kesavananda Case)</div>
-              <div class="lecture-title-hi">भारतीय संविधान की उद्देशिका (प्रस्तावना, संप्रभुता, न्याय, स्वतंत्रता एवं 42वां संशोधन)</div>
+              <div class="lecture-title">Preamble of the Constitution (Objective Resolution, 42nd CAA & Case Laws)</div>
+              <div class="lecture-title-hi">संविधान की प्रस्तावना (उद्देश्य प्रस्ताव, 42वां संशोधन, मूल ढांचा व वाद)</div>
             </div>
           </div>
           <a href="subjects/polity/lecture-3-preamble.html" class="lecture-action-btn">
@@ -339,14 +361,14 @@
           </a>
         </div>
 
-        <!-- Lecture 4: Part 1 & 2 of Constitution (Theory) -->
-        <div class="lecture-row-card">
+        <!-- Lecture 4: Part 1 & 2: Union & Its Territory and Citizenship (Theory) -->
+        <div class="lecture-row-card" data-category="foundations">
           <div class="lecture-info">
-            <div class="lecture-badge-icon" style="background: #e0e7ff; color: #4338ca;">🏛️</div>
+            <div class="lecture-badge-icon" style="background: #ecfdf5; color: #047857;">🇮🇳</div>
             <div class="lecture-text-content">
               <div class="lecture-meta-tags">
                 <span class="meta-pill polity-tag">POLITY • LECTURE 4</span>
-                <span class="meta-pill">PART 1 & 2 (ARTS 1–11)</span>
+                <span class="meta-pill">PARTS 1 & 2 (ARTS 1–11)</span>
                 <span class="meta-pill">SPECIAL PROVISIONS 371A-J</span>
                 <span class="meta-pill">CITIZENSHIP & CAA 2019</span>
               </div>
@@ -361,7 +383,7 @@
         </div>
 
         <!-- Lecture 5: Fundamental Rights (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="rights">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fee2e2; color: #dc2626;">⚖️</div>
             <div class="lecture-text-content">
@@ -382,7 +404,7 @@
         </div>
 
         <!-- Lecture 6: DPSP & Fundamental Duties (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="rights">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">📜</div>
             <div class="lecture-text-content">
@@ -403,7 +425,7 @@
         </div>
 
         <!-- Lecture 7: President and Vice-President (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="union">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #e0e7ff; color: #3730a3;">🏛️</div>
             <div class="lecture-text-content">
@@ -424,7 +446,7 @@
         </div>
 
         <!-- Lecture 8: Prime Minister and Council of Ministers (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="union">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #ecfdf5; color: #065f46;">🇮🇳</div>
             <div class="lecture-text-content">
@@ -445,7 +467,7 @@
         </div>
 
         <!-- Lecture 9: Parliament Part-1 (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="union">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #eff6ff; color: #1e40af;">🏛️</div>
             <div class="lecture-text-content">
@@ -466,7 +488,7 @@
         </div>
 
         <!-- Lecture 10: Parliament Part-2 (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="union">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">💰</div>
             <div class="lecture-text-content">
@@ -487,7 +509,7 @@
         </div>
 
         <!-- Lecture 11: State Legislature & Executive (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="state">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #ecfdf5; color: #065f46;">🏢</div>
             <div class="lecture-text-content">
@@ -508,7 +530,7 @@
         </div>
 
         <!-- Lecture 12: Indian Courts & Judiciary (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="state">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #eff6ff; color: #1d4ed8;">🏛️</div>
             <div class="lecture-text-content">
@@ -529,7 +551,7 @@
         </div>
 
         <!-- Lecture 13: Local Bodies & Constitutional Parts (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="state">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #f0fdf4; color: #166534;">🌱</div>
             <div class="lecture-text-content">
@@ -550,7 +572,7 @@
         </div>
 
         <!-- Lecture 14: Constitutional & Non-Constitutional Bodies (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="bodies">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #eff6ff; color: #1e40af;">🏛️</div>
             <div class="lecture-text-content">
@@ -571,7 +593,7 @@
         </div>
 
         <!-- Lecture 15: Emergency Provisions & Amendments (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="bodies">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fee2e2; color: #dc2626;">🚨</div>
             <div class="lecture-text-content">
@@ -592,7 +614,7 @@
         </div>
 
         <!-- Lecture 16: Important Historical Acts 1773-1947 (Theory) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="bodies">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">📜</div>
             <div class="lecture-text-content">
@@ -613,7 +635,7 @@
         </div>
 
         <!-- Lecture 1: PYQ Series (Practice Questions) -->
-        <div class="lecture-row-card">
+        <div class="lecture-row-card" data-category="pyqs">
           <div class="lecture-info">
             <div class="lecture-badge-icon" style="background: #fef3c7; color: #b45309;">📝</div>
             <div class="lecture-text-content">
@@ -640,7 +662,7 @@
       <div class="upload-icon">📤</div>
       <h3 class="upload-heading">Add More Lectures / नए लेक्चर्स जोड़ें</h3>
       <p class="upload-desc">
-        Aap bas mujhe apne kisi bhi subject (Polity, History, Geography, Economics, Science, Static GK) ka lecture PDF upload kijiye, main turant uska digital notes banakar is App mein organize kar dunga!
+        Aap bas mujhe apne kisi bhi subject (History, Geography, Economics, Science, Static GK) ka lecture PDF upload kijiye, main turant uska digital notes banakar is App mein organize kar dunga!
       </p>
       <div style="display: inline-flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
         <span class="meta-pill">⚡ 100% Source Accuracy</span>
@@ -650,6 +672,30 @@
     </div>
 
   </main>
+
+  <!-- Mobile Bottom Navigation Dock (Native App Feel) -->
+  <nav class="mobile-bottom-dock" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="dock-item active">
+      <span class="dock-icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="#polity-lectures" class="dock-item">
+      <span class="dock-icon">🏛️</span>
+      <span>Polity</span>
+    </a>
+    <button class="dock-item" data-action="search">
+      <span class="dock-icon">🔍</span>
+      <span>Search</span>
+    </button>
+    <button class="dock-item" data-action="view">
+      <span class="dock-icon">📐</span>
+      <span>View</span>
+    </button>
+    <button class="dock-item" data-action="theme">
+      <span class="dock-icon">🌙</span>
+      <span>Theme</span>
+    </button>
+  </nav>
 
   <!-- Footer -->
   <footer class="app-footer">
