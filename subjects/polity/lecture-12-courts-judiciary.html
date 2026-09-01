@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" class="font-normal" data-lang-mode="all">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Judiciary: Supreme Court, High Courts & Lok Adalats (भारतीय न्यायपालिका) | GS Master Notes</title>
+  
+  <!-- Google Fonts: Mukta, Noto Sans Devanagari, Inter, Outfit, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../assets/lecture-style.css">
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- App Header Bar -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="../../index.html" class="menu-toggle" style="text-decoration: none;" title="Back to GS Master Dashboard">
+        <span>🏠</span>
+        <span>Dashboard</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Table of Contents">
+        <span>☰</span>
+        <span>विषय सूची</span>
+      </button>
+      <div class="brand-badge">
+        <div class="brand-logo-icon">GS</div>
+        <div class="brand-info">
+          <span class="brand-title">GS MASTER NOTES</span>
+          <span class="brand-subtitle">📖 INDIAN COURTS (भाग 5 & 6)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="search-box-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search Supreme Court (Art 124), High Court (Art 214), Collegium, Writs, Lok Adalats in EN/हिंदी..." autocomplete="off">
+        <button id="search-clear" class="search-clear" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <!-- Language Mode Switcher -->
+      <div class="lang-mode-group" title="Language Display Mode">
+        <button class="lang-btn active" data-lang="all">EN + HI</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="hi">HI</button>
+      </div>
+
+      <!-- Font Size Adjuster -->
+      <div class="font-size-group">
+        <button class="font-size-btn active" data-size="normal" title="Normal Font">A</button>
+        <button class="font-size-btn" data-size="large" title="Large Font">A+</button>
+        <button class="font-size-btn" data-size="xlarge" title="Extra Large Font">A++</button>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="btn-icon" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <!-- Backdrop for drawer -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header-bar">
+        <div class="sidebar-section-title" style="margin-bottom: 0;">
+          <span>📖 Table of Contents (विषय सूची)</span>
+        </div>
+        <button class="sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Sidebar" title="Close">✕</button>
+      </div>
+      <div>
+        <ul class="topics-nav-list">
+          <li><a href="#sec-judiciary-intro" class="topic-link active"><span class="topic-icon">🏛️</span> 1. Basic Pointers & Integrated Judiciary</a></li>
+          <li><a href="#sec-sc-constitution" class="topic-link"><span class="topic-icon">⚖️</span> 2. Article 124: Establishment, Judges & Qualifications</a></li>
+          <li><a href="#sec-removal-collegium" class="topic-link"><span class="topic-icon">📜</span> 3. Removal Process & 4 Judges Cases (Collegium)</a></li>
+          <li><a href="#sec-sc-jurisdiction1" class="topic-link"><span class="topic-icon">📌</span> 4. Articles 125–132: Appointments, Record & Original Jurisdiction</a></li>
+          <li><a href="#sec-sc-powers" class="topic-link"><span class="topic-icon">⚡</span> 5. Articles 133–145: SLP (136), Complete Justice (142) & Advisory (143)</a></li>
+          <li><a href="#sec-sc-tricks" class="topic-link"><span class="topic-icon">💡</span> 6. Articles 146–147 & SC Mnemonic Trick</a></li>
+          <li><a href="#sec-high-courts" class="topic-link"><span class="topic-icon">🏢</span> 7. Articles 214–222: High Courts & NHRC Trick</a></li>
+          <li><a href="#sec-hc-powers-common" class="topic-link"><span class="topic-icon">🛡️</span> 8. Articles 223–231: Writ Jurisdiction (226) & Common HCs</a></li>
+          <li><a href="#sec-subordinate-courts" class="topic-link"><span class="topic-icon">👥</span> 9. Articles 233–237: Subordinate Courts & District Judges</a></li>
+          <li><a href="#sec-lok-adalats" class="topic-link"><span class="topic-icon">🤝</span> 10. Lok Adalats & NALSA (Legal Services Act 1987)</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="app-main">
+
+      <!-- ====================================================================
+           COVER HERO SECTION
+           ==================================================================== -->
+      <section class="hero-cover-card" id="cover">
+        <div class="hero-badge-top">GS MASTER NOTES • INDIAN POLITY (भारतीय राजव्यवस्था)</div>
+        <div class="hero-topic-label">Polity Lecture-12 / विषय:</div>
+        <h1 class="hero-title">Indian Courts & Judiciary</h1>
+        <div class="hero-title-hindi">भारतीय न्यायपालिका: सर्वोच्च न्यायालय, उच्च न्यायालय, अधीनस्थ न्यायालय व लोक अदालत (भाग 5 व 6)</div>
+        <div class="hero-meta-badges">
+          <span class="hero-meta-pill">🏛️ Supreme Court (Part V: Arts 124–147)</span>
+          <span class="hero-meta-pill">🏢 High Courts (Part VI: Arts 214–231)</span>
+          <span class="hero-meta-pill">👥 Subordinate Courts (Arts 233–237)</span>
+          <span class="hero-meta-pill">🤝 Lok Adalats & NALSA (Act 1987)</span>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 1: BASIC POINTERS & INTEGRATED JUDICIARY
+           ==================================================================== -->
+      <section class="study-card" id="sec-judiciary-intro">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏛️ 1. Basic Pointers & Single Integrated Judicial System</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Structure & Historical Origin</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Judiciary in India is <strong>Integrated</strong> (borrowed from <strong>GoI Act, 1935</strong>) and <strong>Independent</strong> (borrowed from <strong>USA</strong>).</li>
+                <li class="study-bullet">Federal Court established in <strong>1937</strong> under GoI Act 1935.</li>
+                <li class="study-bullet">Supreme Court replaced Federal Court & Privy Council (London).</li>
+                <li class="study-bullet"><strong>1st Sitting of Supreme Court:</strong> <strong>28 January 1950</strong>.</li>
+                <li class="study-bullet">Supreme Court is <strong>'The Guardian of the Constitution'</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0; border-top: 4px solid #059669;">
+              <div class="offer-plan-title" style="color: #059669;">Pyramid Structure of Courts</div>
+              <div style="text-align: center; padding: 0.5rem; font-size: 0.88rem; line-height: 1.8;">
+                <div style="background: rgba(37, 99, 235, 0.1); border-radius: var(--radius-sm); font-weight: 800; color: #1e40af; margin-bottom: 0.35rem;">
+                  🏛️ Supreme Court of India (Apex Court - Top)
+                </div>
+                <div style="background: rgba(16, 185, 129, 0.1); border-radius: var(--radius-sm); font-weight: 700; color: #065f46; margin-bottom: 0.35rem;">
+                  🏢 25 High Courts (State Level)
+                </div>
+                <div style="background: rgba(245, 158, 11, 0.1); border-radius: var(--radius-sm); font-weight: 600; color: #92400e;">
+                  👥 Subordinate Courts (District & Sessions Courts)
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 2: ARTICLE 124 (SUPREME COURT CONSTITUTION & JUDGES)
+           ==================================================================== -->
+      <section class="study-card" id="sec-sc-constitution">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚖️ 2. Article 124: Establishment, Composition & Qualifications of SC Judges</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Strength & Appointment</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Originally (1950):</strong> 1 CJI + 7 Judges = <strong>8 Judges</strong>.</li>
+                <li class="study-bullet"><strong>Present Strength:</strong> 1 CJI + 33 Judges = <strong>34 Judges (Max Sanctioned)</strong>.</li>
+                <li class="study-bullet">Parliament increases strength by law.</li>
+                <li class="study-bullet">Appointed by the <strong>President</strong> in consultation with CJI and Collegium.</li>
+                <li class="study-bullet"><strong>Tenure:</strong> Serves till the age of <strong>65 years</strong>.</li>
+                <li class="study-bullet">Resignation addressed to the <strong>President</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Qualifications for SC Judge [Art 124(3)]</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Must be a <strong>Citizen of India</strong>; AND</li>
+                <li class="study-bullet">(a) At least <strong>5 years as High Court Judge</strong>; OR</li>
+                <li class="study-bullet">(b) At least <strong>10 years as High Court Advocate</strong>; OR</li>
+                <li class="study-bullet">(c) <strong>Distinguished Jurist</strong> in opinion of President.</li>
+              </ul>
+              <div style="margin-top: 0.5rem; font-size: 0.82rem; background: var(--bg-card-secondary); padding: 0.4rem; border-radius: var(--radius-sm);">
+                • <strong>Restriction [124(7)]:</strong> Retired SC judge cannot practice in any court in India.
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 3: REMOVAL PROCESS & 4 JUDGES CASES (COLLEGIUM)
+           ==================================================================== -->
+      <section class="study-card" id="sec-removal-collegium">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📜 3. Removal Procedure (Judges Inquiry Act 1968) & 4 Judges Cases</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #dc2626;">Removal of Judges [Art 124(4)]</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">Grounds: <strong>1. Proved Misbehaviour</strong> or <strong>2. Incapacity</strong>.</li>
+                <li class="study-bullet">Passed by <strong>Special Majority</strong> in both Houses of Parliament.</li>
+                <li class="study-bullet"><strong>Judges Inquiry Act, 1968:</strong> Motion signed by <strong>100 members in Lok Sabha OR 50 members in Rajya Sabha</strong>.</li>
+                <li class="study-bullet">3-member judicial committee investigates.</li>
+                <li class="study-bullet">⭐ <strong>No Supreme Court Judge has been removed till date.</strong></li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #d97706;">Historic CJI & Women Judges Facts</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet"><strong>1st Chief Justice of India:</strong> <strong>Sir Harilal Jekisundas Kania (H.J. Kania)</strong>.</li>
+                <li class="study-bullet"><strong>1st Female Judge of SC:</strong> <strong>Justice M. Fathima Beevi (1989)</strong>.</li>
+                <li class="study-bullet"><em>No female Chief Justice of India till date.</em></li>
+                <li class="study-bullet">52nd CJI: Justice B. R. Gavai | 53rd CJI: Justice Surya Kant.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Evolution of Collegium System -->
+          <h4 style="font-family: var(--font-family-display); font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 1.5rem 0 0.75rem;">
+            Evolution of Collegium System (4 Landmark Judges Cases):
+          </h4>
+
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; font-size: 0.825rem;">
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color:#2563eb;">1st Case (1982)</strong>
+              <p style="margin-top:0.25rem;"><em>S.P. Gupta Case:</em> Consultation does NOT mean concurrence; Executive primacy.</p>
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color:#059669;">2nd Case (1993)</strong>
+              <p style="margin-top:0.25rem;">Consultation = Concurrence. Collegium born: <strong>CJI + 2 senior judges</strong> (Binding).</p>
+            </div>
+            <div class="offer-plan-card" style="margin:0;">
+              <strong style="color:#7c3aed;">3rd Case (1998)</strong>
+              <p style="margin-top:0.25rem;">Collegium expanded to 5 members: <strong>CJI + 4 senior-most judges</strong>.</p>
+            </div>
+            <div class="offer-plan-card" style="margin:0; border: 2px solid #dc2626;">
+              <strong style="color:#dc2626;">4th Case (2015)</strong>
+              <p style="margin-top:0.25rem;">Struck down 99th CA & NJAC Act as unconstitutional; <strong>restored Collegium</strong>.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 4: ARTICLES 125 TO 132 (RECORD & JURISDICTION)
+           ==================================================================== -->
+      <section class="study-card" id="sec-sc-jurisdiction1">
+        <div class="study-card-header">
+          <h2 class="study-card-title">📌 4. Articles 125 to 132: Appointments, Court of Record & Original Jurisdiction</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.88rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 126 : Acting CJI</div>
+              <p>President appoints Acting Chief Justice when CJI office is vacant or CJI is unable to perform duties.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 127 : Ad Hoc Judges</div>
+              <p>CJI with President's consent requests a qualified High Court Judge to sit as temporary Ad Hoc judge for quorum.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 128 : Retired Judges</div>
+              <p>Retired SC/HC judges can be invited by CJI with President's consent to sit and act as SC judge.</p>
+            </div>
+
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #d97706; background: var(--bg-card-secondary);">
+              <h4 style="color: #d97706; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 129 : Court of Record (अभिलेख न्यायालय)
+              </h4>
+              <p style="font-size: 0.88rem;">
+                Judgments preserved as legal precedents. Has power to punish for <strong>Contempt of Court</strong> (Civil & Criminal contempt).
+              </p>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #2563eb; background: var(--bg-card-secondary);">
+              <h4 style="color: #2563eb; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 131 : Exclusive Original Jurisdiction
+              </h4>
+              <p style="font-size: 0.85rem;">
+                • Centre vs States | Centre + States vs Other States | Inter-State Disputes.<br>
+                🚫 <em>Exceptions: Pre-const treaties, Inter-state water disputes (Art 262), Finance Commission.</em>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 5: ARTICLES 133 TO 145 (APPELLATE, SLP, 142 & 143)
+           ==================================================================== -->
+      <section class="study-card" id="sec-sc-powers">
+        <div class="study-card-header">
+          <h2 class="study-card-title">⚡ 5. Articles 133 to 145: SLP (136), Complete Justice (142) & Advisory (143)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; font-size: 0.88rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 136 : Special Leave (SLP)</div>
+              <p style="font-size: 0.825rem;">Discretionary power to grant leave to appeal from any court/tribunal in India. <em>(Military Courts/Tribunals excluded).</em></p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Article 137 : Review Power</div>
+              <p style="font-size: 0.825rem;">Supreme Court can review its own judgments/orders. Judicial review borrowed from USA.</p>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #7c3aed;">Article 141 : Law Binding</div>
+              <p style="font-size: 0.825rem;">Law declared by the Supreme Court is binding on all courts within the territory of India.</p>
+            </div>
+
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #dc2626; background: rgba(220, 38, 38, 0.04);">
+              <h4 style="color: #dc2626; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 142 : Complete Justice (पूर्ण न्याय)
+              </h4>
+              <p style="font-size: 0.88rem;">
+                Supreme Court can pass any decree or order necessary for doing <strong>complete justice</strong> in any cause or matter pending before it.
+              </p>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #059669; background: rgba(16, 185, 129, 0.04);">
+              <h4 style="color: #059669; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 143 : Advisory Jurisdiction
+              </h4>
+              <p style="font-size: 0.85rem;">
+                President refers matters to SC: (1) Public importance (SC may/may not advise), (2) Pre-constitutional treaties (SC MUST advise). <em>Advice is NOT binding on President.</em>
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 6: SC MNEMONIC TRICK
+           ==================================================================== -->
+      <section class="study-card" id="sec-sc-tricks">
+        <div class="study-card-header">
+          <h2 class="study-card-title">💡 6. Super Memory Trick for Supreme Court Articles (124 to 131)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div class="callout-box" style="border-left-color: #2563eb; background: var(--bg-card-secondary); margin-top: 0;">
+            <div style="font-size: 1.1rem; font-weight: 800; color: #1e40af; text-align: center;">
+              💡 <em>"SC ne SAARC countries ko SEAT OFFER Kari"</em>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-top: 0.75rem; font-size: 0.85rem;">
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>SC</strong> = Art 124 (Supreme Court)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>S</strong> = Art 125 (Salaries)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>A</strong> = Art 126 (Acting CJI)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>A</strong> = Art 127 (Ad Hoc Judges)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>R</strong> = Art 128 (Retired Judges)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>C</strong> = Art 129 (Court of Record)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>Seat</strong> = Art 130 (Delhi Seat)</div>
+              <div class="badge-tag" style="background:var(--bg-card); border:1px solid var(--border-color);"><strong>Offer</strong> = Art 131 (Original Juris)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 7: HIGH COURTS & NHRC TRICK (ARTICLES 214 TO 222)
+           ==================================================================== -->
+      <section class="study-card" id="sec-high-courts">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🏢 7. High Courts in States (Part VI: Articles 214–222 & NHRC Trick)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 217: HC Judges Appointment & Tenure</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">Appointed by <strong>President</strong> (Consultation: CJI + Governor + HC Chief Justice).</li>
+                <li class="study-bullet"><strong>Tenure:</strong> Serves till the age of <strong>62 years</strong>.</li>
+                <li class="study-bullet">Resigns to the <strong>President</strong>; removed like SC judge.</li>
+                <li class="study-bullet">Qualifications: Citizen + 10 yrs advocate in HC / 10 yrs judicial office.</li>
+                <li class="study-bullet">❌ <strong>No provision for "Distinguished Jurist" in High Court</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Important Facts & Salary Difference</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet"><strong>1st HC (1862):</strong> Calcutta High Court.</li>
+                <li class="study-bullet"><strong>1st Female HC Judge:</strong> Justice Anna Chandy (Kerala).</li>
+                <li class="study-bullet"><strong>1st Female Chief Justice of HC:</strong> Justice Leila Seth (HP).</li>
+                <li class="study-bullet"><strong>Total High Courts in India:</strong> <strong>25 High Courts</strong>.</li>
+                <li class="study-bullet">💰 <strong>Salaries:</strong> From <strong>Consolidated Fund of State</strong>.<br>👵 <strong>Pensions:</strong> From <strong>Consolidated Fund of India</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Mnemonic NHRC AAO ReST karo -->
+          <div class="callout-box" style="border-left-color: #7c3aed; background: var(--bg-card-secondary); margin-top: 1.25rem;">
+            <div style="font-weight: 800; color: #7c3aed; font-size: 1rem; text-align: center;">
+              💡 <em>"NHRC AAO ReST karo" (Articles 214 to 222)</em>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; margin-top: 0.5rem; font-size: 0.8rem;">
+              <div class="badge-tag"><strong>H</strong>: 214 (High Court)</div>
+              <div class="badge-tag"><strong>R</strong>: 215 (Record Court)</div>
+              <div class="badge-tag"><strong>C</strong>: 216 (Constitution)</div>
+              <div class="badge-tag"><strong>A</strong>: 217 (Appointment)</div>
+              <div class="badge-tag"><strong>A</strong>: 218 (App of SC laws)</div>
+              <div class="badge-tag"><strong>O</strong>: 219 (Oath by Gov)</div>
+              <div class="badge-tag"><strong>R</strong>: 220 (Restrictions)</div>
+              <div class="badge-tag"><strong>S</strong>: 221 (Salary)</div>
+              <div class="badge-tag"><strong>T</strong>: 222 (Transfer by Pres)</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 8: HC WRIT JURISDICTION & COMMON HCS
+           ==================================================================== -->
+      <section class="study-card" id="sec-hc-powers-common">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🛡️ 8. Article 226 (Writ Jurisdiction) & Common High Courts (7th CA 1956)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="callout-box" style="margin:0; border-left-color: #2563eb; background: var(--bg-card-secondary);">
+              <h4 style="color: #2563eb; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 226 : High Court Writ Jurisdiction (Wider than SC)
+              </h4>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.25rem;">
+                <li class="study-bullet">• HC can issue writs for <strong>Fundamental Rights + Legal Rights</strong>.</li>
+                <li class="study-bullet">• SC (Art 32) issues writs <strong>ONLY for Fundamental Rights</strong>.</li>
+                <li class="study-bullet">• <strong>L. Chandra Kumar Case (1997):</strong> Judicial review under Arts 226 & 32 is part of the Basic Structure.</li>
+              </ul>
+            </div>
+
+            <div class="callout-box" style="margin:0; border-left-color: #059669; background: var(--bg-card-secondary);">
+              <h4 style="color: #059669; font-size: 1.05rem; font-weight: 800; margin-bottom: 0.25rem;">
+                Article 231 : Common High Courts
+              </h4>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.25rem;">
+                <li class="study-bullet">• <strong>Guwahati HC:</strong> Assam, Nagaland, Mizoram, Arunachal (4 States).</li>
+                <li class="study-bullet">• <strong>Bombay HC:</strong> Maharashtra, Goa, DNHDD.</li>
+                <li class="study-bullet">• <strong>Calcutta HC:</strong> WB + Andaman & Nicobar.</li>
+                <li class="study-bullet">• <strong>Kerala HC:</strong> Kerala + Lakshadweep.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 9: SUBORDINATE COURTS (ARTICLES 233 TO 237)
+           ==================================================================== -->
+      <section class="study-card" id="sec-subordinate-courts">
+        <div class="study-card-header">
+          <h2 class="study-card-title">👥 9. Subordinate Courts (Articles 233–237) & District Judges</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Article 233 : Appointment of District Judges</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet">Appointed by the <strong>Governor of State in consultation with High Court</strong>.</li>
+                <li class="study-bullet">Direct recruitment qualification: <strong>Minimum 7 years as an advocate</strong> + recommended by High Court.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Articles 234 & 235 : Control & Other Judges</div>
+              <ul class="study-bullet-list" style="font-size: 0.88rem; gap: 0.35rem;">
+                <li class="study-bullet"><strong>Art 234:</strong> Recruitment of other judicial officers by Governor with SPSC & HC.</li>
+                <li class="study-bullet"><strong>Art 235:</strong> Control (posting, promotion, leave) over Subordinate Courts vests in <strong>High Court</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           SECTION 10: LOK ADALATS & NALSA
+           ==================================================================== -->
+      <section class="study-card" id="sec-lok-adalats">
+        <div class="study-card-header">
+          <h2 class="study-card-title">🤝 10. Lok Adalats & National Legal Services Authority (NALSA)</h2>
+        </div>
+        <div class="study-card-body">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #2563eb;">Status & NALSA Hierarchy</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">Alternative Dispute Redressal (ADR) mechanism for amicable settlement.</li>
+                <li class="study-bullet"><strong>Statutory Status:</strong> Under <strong>Legal Services Authorities Act, 1987</strong>.</li>
+                <li class="study-bullet"><strong>NALSA Patron-in-Chief:</strong> Chief Justice of India (CJI).</li>
+                <li class="study-bullet"><strong>NALSA Executive Chairman:</strong> Senior-most Judge of Supreme Court.</li>
+              </ul>
+            </div>
+
+            <div class="offer-plan-card" style="margin:0;">
+              <div class="offer-plan-title" style="color: #059669;">Key Rules: No Fees & Binding Award</div>
+              <ul class="study-bullet-list" style="font-size: 0.85rem; gap: 0.3rem;">
+                <li class="study-bullet">💰 <strong>Fees:</strong> <strong>NO court fee payable</strong> (existing court fee refunded).</li>
+                <li class="study-bullet">⚖️ <strong>Award:</strong> Deemed as decree of Civil Court; <strong>Final & Binding</strong>.</li>
+                <li class="study-bullet">🚫 <strong>Appeal:</strong> <strong>NO appeal lies</strong> against the award before any court.</li>
+                <li class="study-bullet">🚫 <strong>Excluded Cases:</strong> <strong>Non-compoundable criminal offences CANNOT be dealt with</strong>.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Bar -->
+      <footer class="source-footer-bar">
+        <div style="font-weight: 700; color: var(--text-primary); font-size: 0.9rem;">
+          GS MASTER STUDY NOTES (द्विभाषी नोट्स)
+        </div>
+        <div class="social-links">
+          <span class="social-pill">🏛️ Indian Polity</span>
+          <span class="social-pill">📖 Lecture 12: Indian Courts</span>
+          <span class="social-pill">🌐 Hindi + English Bilingual</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" title="Scroll to Top" aria-label="Scroll to Top">↑</button>
+
+  <script src="../../assets/lecture-app.js"></script>
+</body>
+</html>
